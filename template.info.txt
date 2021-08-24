@@ -1,7 +1,6 @@
-base     argon
-author   Anchit
-email    ab@abifog.com
-date     2020-07-11
-name     Argon Template
-desc     Argon - clean, responsive, modern template for Dokuwiki.
-url      https://www.dokuwiki.org/template:argon
+base     krypton
+author   solarkraft
+date     2021-08-24
+name     Krypton Template
+desc     Clean, responsive, modern theme based on Argon. 
+url      https://github.com/fablab-luenen/dokuwiki-krypton
