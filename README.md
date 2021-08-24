@@ -1,6 +1,6 @@
 # Krypton
 
-An evolution of the great [Argon template](https://github.com/IceWreck/Argon-Dokuwiki-Template). Clean, responsive, modern. 
+An evolution of the great [Argon template](https://github.com/IceWreck/Argon-Dokuwiki-Template). Clean, responsive, modern. Inspired by [Argon-Alt](https://github.com/jlysd/Argon-Dokuwiki-Template). 
 
 ## Goals / Improvements over Argon
 
