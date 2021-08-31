@@ -253,6 +253,7 @@ $showIcon = tpl_getConf('showIcon');
 
 								// Get all available page menu items
 								$menu_items = (new \dokuwiki\Menu\PageMenu())->getItems();
+								$overflow_items = array();
 
 								// Show the important items directly on the page
 								foreach($menu_items as $item) {
@@ -267,21 +268,15 @@ $showIcon = tpl_getConf('showIcon');
 											.'<i class="">'.inlineSVG($item->getSvg()).'</i>'
 											. '<span class="a11y">'.$item->getLabel().'</span>'
 											. '</a></li>';
-									}
-								}
-
-							
-								// Show the less important items in a different way (tbd) TODO: Move check into above loop
-								$overflow_items = array();
-								foreach($menu_items as $item) {
-									if(!isImportant($item) && !isIrrelevant($item)) {
+									} else if (!isIrrelevant($item)) {
+										// Remember unimportant items for later
 										array_push($overflow_items, $item);
 									}
 								}
 
 								// Actually display them in an overflow menu
 								if(!empty($overflow_items)) {
-									echo '<li class="dropdown show"><a href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px"><path d="M0 0h24v24H0z" fill="none"/><path d="M12 8c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm0 2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"/></svg></i></a><div class="dropdown-menu">';
+									echo '<li class="dropdown"><a href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px"><path d="M0 0h24v24H0z" fill="none"/><path d="M12 8c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm0 2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"/></svg></i></a><div class="dropdown-menu">';
 									
 									foreach($overflow_items as $item) {
 										$accesskey = $item->getAccesskey();
