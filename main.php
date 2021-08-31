@@ -227,6 +227,24 @@ $showIcon = tpl_getConf('showIcon');
 
 						<hr />
 
+						<div class="argon-doku-page-menu">
+                            <?php
+								$menu_items = (new \dokuwiki\Menu\PageMenu())->getItems();
+								$item = $menu_items[0];
+								$accesskey = $item->getAccesskey();
+								$akey = '';
+								if($accesskey) {
+									$akey = 'accesskey="'.$accesskey.'" ';
+								}
+								echo '<li class="'.$item->getType().'">'
+										.'<a class="page-menu__link '.$item->getLinkAttributes('')['class'].'" href="'.$item->getLink().'" title="'.$item->getTitle().'" '.$akey.'>'
+											.'<i class="">'.inlineSVG($item->getSvg()).'</i>'
+											.'<span class="a11y">'.$item->getLabel().'</span>'
+											.'<span>'.$item->getLabel().'</span>'
+									. '</a></li>';
+                            ?>
+						</div>
+
 						<?php if ($showTools && tpl_getConf('movePageTools')): ?>
 						<!-- Page Menu -->
                         <div class="argon-doku-page-menu">
