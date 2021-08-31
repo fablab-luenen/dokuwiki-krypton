@@ -24706,6 +24706,7 @@ pre > code.highlight {
 /*# sourceMappingURL=agd.css.map */
 html {
   scroll-padding-top: 5rem;
+  scroll-behavior: smooth;
 }
 
 legend {
