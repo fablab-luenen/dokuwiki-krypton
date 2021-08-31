@@ -270,11 +270,22 @@ $showIcon = tpl_getConf('showIcon');
 									}
 								}
 
-								// Show the less important items in a different way (tbd)
+							
+								// Show the less important items in a different way (tbd) TODO: Move check into above loop
+								$overflow_items = array();
 								foreach($menu_items as $item) {
 									if(!isImportant($item) && !isIrrelevant($item)) {
+										array_push($overflow_items, $item);
+									}
+								}
+
+								// Actually display them in an overflow menu
+								if(!empty($overflow_items)) {
+									//echo '<!--';
+
+									foreach($overflow_items as $item) {
 										$accesskey = $item->getAccesskey();
-									    $akey = '';
+										$akey = '';
 										if($accesskey) {
 											$akey = 'accesskey="'.$accesskey.'" ';
 										}				
@@ -285,7 +296,9 @@ $showIcon = tpl_getConf('showIcon');
 											. '<span>'.$item->getLabel().'</span>'
 											. '</a></li>';
 									}
+									// echo '-->';
 								}
+								
                             ?>
 						</div>
 
