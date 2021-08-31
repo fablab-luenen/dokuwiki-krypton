@@ -259,7 +259,7 @@ $showIcon = tpl_getConf('showIcon');
 
 						<hr />
 						<!-- Footer -->
-						<footer class="card footer-card">
+						<footer class="footer-card">
 							<div class="card-body">
 								<div class="container">
 									<div class="row">

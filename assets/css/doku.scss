@@ -65,6 +65,7 @@ select {
 
 
 #dokuwiki__content {
+
     p {
         font-weight: 400;
     }
@@ -582,7 +583,6 @@ textarea {
 // ------ Footer ------
 
 footer {
-    background-color: #f4f5f7;
     text-align: center;
 
     .argon-doku-footer-fullmenu {
@@ -601,5 +601,9 @@ footer {
         li:nth-of-type(1) {
             margin-left: 0em;
         }
+    }
+
+    &.footer-card {
+        background-color: unset;
     }
 }

@@ -25041,7 +25041,6 @@ textarea {
 }
 
 footer {
-  background-color: #f4f5f7;
   text-align: center;
 }
 footer .argon-doku-footer-fullmenu {
@@ -25057,6 +25056,9 @@ footer .argon-doku-footer-fullmenu li :hover {
 }
 footer .argon-doku-footer-fullmenu li:nth-of-type(1) {
   margin-left: 0em;
+}
+footer.footer-card {
+  background-color: unset;
 }
 
 /*# sourceMappingURL=doku.css.map */
