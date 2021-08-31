@@ -275,14 +275,6 @@ $showIcon = tpl_getConf('showIcon');
 									</div>
 									<br/>
 									<div class="row">
-
-										<div class="footer-search">
-											<?php tpl_searchform()?>
-										</div>
-
-									</div>
-									<br/>
-									<div class="row">
 									<div class="argon-doku-footer-fullmenu">
 										<?php
 										$menu_items = (new \dokuwiki\Menu\MobileMenu())->getItems();
