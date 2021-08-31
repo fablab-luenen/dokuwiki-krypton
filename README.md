@@ -2,6 +2,8 @@
 
 An evolution of the great [Argon template](https://github.com/IceWreck/Argon-Dokuwiki-Template). Clean, responsive, modern. Inspired by [Argon-Alt](https://github.com/jlysd/Argon-Dokuwiki-Template). 
 
+A part of the [dokuwiki-preconfigured](https://github.com/fablab-luenen/dokuwiki-preconfigured/) project. 
+
 ## Goals / Improvements over Argon
 
 - Sticky/docking page buttons for long pages
