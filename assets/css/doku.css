@@ -24730,8 +24730,16 @@ select {
   background: #dfe2f1;
 }
 
-.breadcrumb {
+ol.breadcrumb {
   flex-direction: column;
+  background-color: unset;
+  padding: 0;
+  margin-bottom: -0.2rem;
+}
+
+main > hr {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
 }
 
 #dokuwiki__content p {

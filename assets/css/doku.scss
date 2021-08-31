@@ -60,9 +60,18 @@ select {
 }
 
 // Breadrumbs
-
-.breadcrumb {
+ol.breadcrumb {
     flex-direction: column;
+    background-color: unset;
+
+    padding: 0;
+    margin-bottom: -0.2rem; // Compensate for hr margin
+}
+
+// Horizontal rules between breadcrumbs, content and footer
+main > hr {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
 }
 
 

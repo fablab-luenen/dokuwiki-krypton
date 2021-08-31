@@ -225,6 +225,8 @@ $showIcon = tpl_getConf('showIcon');
 							</ol>
 						</nav>
 
+						<hr />
+
 						<?php if ($showTools && tpl_getConf('movePageTools')): ?>
 						<!-- Page Menu -->
                         <div class="argon-doku-page-menu">
