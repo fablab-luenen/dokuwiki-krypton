@@ -259,7 +259,7 @@ $showIcon = tpl_getConf('showIcon');
 
 						<hr />
 						<!-- Footer -->
-						<div class="card footer-card">
+						<footer class="card footer-card">
 							<div class="card-body">
 								<div class="container">
 									<div class="row">
@@ -293,7 +293,7 @@ $showIcon = tpl_getConf('showIcon');
 								</div>
 
 							</div>
-						</div>
+						</footer>
 						<?php tpl_indexerWebBug(); ?>
 					</main>
 

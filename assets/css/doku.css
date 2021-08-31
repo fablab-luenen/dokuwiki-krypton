@@ -58,7 +58,7 @@ Coded by www.creative-tim.com
   --default: #172b4d;
   --white: #fff;
   --neutral: #fff;
-  --darker:black;
+  --darker: black;
   --breakpoint-xs: 0;
   --breakpoint-sm: 576px;
   --breakpoint-md: 768px;
@@ -19324,7 +19324,7 @@ textarea[resize=horizontal] {
 }
 
 .has-success:after {
-  content: "";
+  content: "\ea26";
   color: daken(#2dce89, 18%);
   background-color: #69deac;
 }
@@ -19342,7 +19342,7 @@ textarea[resize=horizontal] {
 }
 
 .has-danger:after {
-  content: "";
+  content: "\ea53";
   color: daken(#fb6340, 18%);
   background-color: #fda08b;
 }
@@ -25040,26 +25040,26 @@ textarea {
   font-size: 0.84rem;
 }
 
-.footer-card {
+footer {
   background-color: #f4f5f7;
   text-align: center;
 }
-.footer-card .footer-search {
+footer .footer-search {
   margin-left: auto;
   margin-right: auto;
 }
-.footer-card .argon-doku-footer-fullmenu {
+footer .argon-doku-footer-fullmenu {
   margin-left: auto;
   margin-right: auto;
 }
-.footer-card .argon-doku-footer-fullmenu li {
+footer .argon-doku-footer-fullmenu li {
   display: inline;
   fill: #6c757d;
 }
-.footer-card .argon-doku-footer-fullmenu li :hover {
+footer .argon-doku-footer-fullmenu li :hover {
   fill: #525f7f;
 }
-.footer-card .argon-doku-footer-fullmenu li:nth-of-type(1) {
+footer .argon-doku-footer-fullmenu li:nth-of-type(1) {
   margin-left: 0em;
 }
 
