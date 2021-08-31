@@ -15,6 +15,10 @@
 
 // ------ General ------
 
+html {
+    scroll-padding-top: 5rem; // Offset for anchor scrolling
+}
+
 button {
     @extend .btn;
     @extend .btn-neutral;
