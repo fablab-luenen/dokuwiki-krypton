@@ -229,19 +229,35 @@ $showIcon = tpl_getConf('showIcon');
 
 						<div class="argon-doku-page-menu">
                             <?php
-								$menu_items = (new \dokuwiki\Menu\PageMenu())->getItems();
-								$item = $menu_items[0];
-								$accesskey = $item->getAccesskey();
-								$akey = '';
-								if($accesskey) {
-									$akey = 'accesskey="'.$accesskey.'" ';
+								// Check if the button should be shown outside of the overflow menu or not
+								function isImportant($item) {
+							        // Class names of buttons that should be shown directly on the page. Page source is deliberately omitted. 
+								    $important_items = array("edit", "show");
+
+									if(in_array($item->getLinkAttributes('')['class'], $important_items)) {
+										return true;
+									}
+									return false;
 								}
-								echo '<li class="'.$item->getType().'">'
-										.'<a class="page-menu__link '.$item->getLinkAttributes('')['class'].'" href="'.$item->getLink().'" title="'.$item->getTitle().'" '.$akey.'>'
+
+								// Get all available page menu items
+								$menu_items = (new \dokuwiki\Menu\PageMenu())->getItems();
+
+								// Show the important items directly on the page
+								foreach($menu_items as $item) {
+									if(isImportant($item)) {
+										$accesskey = $item->getAccesskey();
+									    $akey = '';
+										if($accesskey) {
+											$akey = 'accesskey="'.$accesskey.'" ';
+										}				
+										echo '<li class="'.$item->getType().'">'
+											.'<a class="page-menu__link '.$item->getLinkAttributes('')['class'].'" href="'.$item->getLink().'" title="'.$item->getTitle().'" '.$akey.'>'
 											.'<i class="">'.inlineSVG($item->getSvg()).'</i>'
-											.'<span class="a11y">'.$item->getLabel().'</span>'
-											.'<span>'.$item->getLabel().'</span>'
-									. '</a></li>';
+											. '<span class="a11y">'.$item->getLabel().'</span>'
+											. '</a></li>';
+									}
+								}
                             ?>
 						</div>
 
