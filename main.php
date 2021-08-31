@@ -281,24 +281,19 @@ $showIcon = tpl_getConf('showIcon');
 
 								// Actually display them in an overflow menu
 								if(!empty($overflow_items)) {
-									//echo '<!--';
-
+									echo '<li class="dropdown show"><a href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px"><path d="M0 0h24v24H0z" fill="none"/><path d="M12 8c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm0 2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"/></svg></i></a><div class="dropdown-menu">';
+									
 									foreach($overflow_items as $item) {
 										$accesskey = $item->getAccesskey();
 										$akey = '';
 										if($accesskey) {
 											$akey = 'accesskey="'.$accesskey.'" ';
 										}				
-										echo '<li class="'.$item->getType().'">'
-											.'<a class="page-menu__link '.$item->getLinkAttributes('')['class'].'" href="'.$item->getLink().'" title="'.$item->getTitle().'" '.$akey.'>'
-											.'<i class="">'.inlineSVG($item->getSvg()).'</i>'
-											. '<span class="a11y">'.$item->getLabel().'</span>'
-											. '<span>'.$item->getLabel().'</span>'
-											. '</a></li>';
+										echo '<a class="dropdown-item '.$item->getType().' page-menu__link '.$item->getLinkAttributes('')['class'].'" href="'.$item->getLink().'" title="'.$item->getTitle().'" '.$akey.'><i class="">'.inlineSVG($item->getSvg()).'</i><span>'.$item->getLabel().'</span></a>';
 									}
-									// echo '-->';
+
+									echo '</div></li></html>';
 								}
-								
                             ?>
 						</div>
 
