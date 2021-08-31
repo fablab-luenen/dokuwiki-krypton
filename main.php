@@ -229,6 +229,17 @@ $showIcon = tpl_getConf('showIcon');
 
 						<div class="argon-doku-page-menu">
                             <?php
+								// Check if the button should not be shown at all
+								function isIrrelevant($item) {
+									// Class names of buttons that should be shown directly on the page. Page source is deliberately omitted. 
+									$irrelevant_items = array("top");
+
+									if(in_array($item->getLinkAttributes('')['class'], $irrelevant_items)) {
+										return true;
+									}
+									return false;
+								}
+
 								// Check if the button should be shown outside of the overflow menu or not
 								function isImportant($item) {
 							        // Class names of buttons that should be shown directly on the page. Page source is deliberately omitted. 
@@ -255,6 +266,23 @@ $showIcon = tpl_getConf('showIcon');
 											.'<a class="page-menu__link '.$item->getLinkAttributes('')['class'].'" href="'.$item->getLink().'" title="'.$item->getTitle().'" '.$akey.'>'
 											.'<i class="">'.inlineSVG($item->getSvg()).'</i>'
 											. '<span class="a11y">'.$item->getLabel().'</span>'
+											. '</a></li>';
+									}
+								}
+
+								// Show the less important items in a different way (tbd)
+								foreach($menu_items as $item) {
+									if(!isImportant($item) && !isIrrelevant($item)) {
+										$accesskey = $item->getAccesskey();
+									    $akey = '';
+										if($accesskey) {
+											$akey = 'accesskey="'.$accesskey.'" ';
+										}				
+										echo '<li class="'.$item->getType().'">'
+											.'<a class="page-menu__link '.$item->getLinkAttributes('')['class'].'" href="'.$item->getLink().'" title="'.$item->getTitle().'" '.$akey.'>'
+											.'<i class="">'.inlineSVG($item->getSvg()).'</i>'
+											. '<span class="a11y">'.$item->getLabel().'</span>'
+											. '<span>'.$item->getLabel().'</span>'
 											. '</a></li>';
 									}
 								}
