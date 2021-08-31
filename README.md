@@ -13,6 +13,15 @@ A part of the [dokuwiki-preconfigured](https://github.com/fablab-luenen/dokuwiki
 
 ![Screenshot](screenshots/1.png)
 
+## Development
+"I've imported the base stylesheet from the argon design system and then added custom styles on top in the assets/css/doku.scss file. The file is then compiled to CSS using SASS."
+
+Hint: This uses the new Dart Sass (`npm install -g`/`npx`), not Ruby Sass (`gem install`). 
+
+```
+npx sass --watch assets/css/doku.scss assets/css/doku.css
+```
+
 ## Contributors
 
 - [IceWreck](https://github.com/IceWreck) (Argon)
