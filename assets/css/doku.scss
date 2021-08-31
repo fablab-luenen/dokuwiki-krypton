@@ -66,6 +66,10 @@ ol.breadcrumb {
 
     padding: 0;
     margin-bottom: -0.2rem; // Compensate for hr margin
+
+    .bchead {
+        display: none;
+    }
 }
 
 // Horizontal rules between breadcrumbs, content and footer

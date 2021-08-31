@@ -24736,6 +24736,9 @@ ol.breadcrumb {
   padding: 0;
   margin-bottom: -0.2rem;
 }
+ol.breadcrumb .bchead {
+  display: none;
+}
 
 main > hr {
   margin-top: 1rem;
