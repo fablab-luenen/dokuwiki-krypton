@@ -213,17 +213,84 @@ $showIcon = tpl_getConf('showIcon');
 						<?php tpl_includeFile('header.html')?>
 
 
-						<!-- Trace/Navigation -->
-						<nav aria-label="breadcrumb" role="navigation">
-							<ol class="breadcrumb">
-								<?php if ($conf['breadcrumbs']) {?>
-								<div class="breadcrumbs"><?php tpl_breadcrumbs()?></div>
-								<?php }?>
-								<?php if ($conf['youarehere']) {?>
-								<div class="breadcrumbs"><?php tpl_youarehere()?></div>
-								<?php }?>
-							</ol>
-						</nav>
+						<div class="d-flex justify-content-between align-items-center">
+							<!-- Trace/Navigation -->
+							<nav aria-label="breadcrumb" role="navigation">
+								<ol class="breadcrumb">
+									<?php if ($conf['breadcrumbs']) {?>
+									<div class="breadcrumbs"><?php tpl_breadcrumbs()?></div>
+									<?php }?>
+									<?php if ($conf['youarehere']) {?>
+									<div class="breadcrumbs"><?php tpl_youarehere()?></div>
+									<?php }?>
+								</ol>
+							</nav>
+
+							<div class="argon-doku-page-menu">
+								<?php
+									// Check if the button should not be shown at all
+									function isIrrelevant($item) {
+										// Class names of buttons that should be shown directly on the page. Page source is deliberately omitted. 
+										$irrelevant_items = array("top");
+
+										if(in_array($item->getLinkAttributes('')['class'], $irrelevant_items)) {
+											return true;
+										}
+										return false;
+									}
+
+									// Check if the button should be shown outside of the overflow menu or not
+									function isImportant($item) {
+										// Class names of buttons that should be shown directly on the page. Page source is deliberately omitted. 
+										$important_items = array("edit", "show");
+
+										if(in_array($item->getLinkAttributes('')['class'], $important_items)) {
+											return true;
+										}
+										return false;
+									}
+
+									// Get all available page menu items
+									$menu_items = (new \dokuwiki\Menu\PageMenu())->getItems();
+									$overflow_items = array();
+
+									// Show the important items directly on the page
+									foreach($menu_items as $item) {
+										if(isImportant($item)) {
+											$accesskey = $item->getAccesskey();
+											$akey = '';
+											if($accesskey) {
+												$akey = 'accesskey="'.$accesskey.'" ';
+											}				
+											echo '<li class="'.$item->getType().'">'
+												.'<a class="page-menu__link '.$item->getLinkAttributes('')['class'].'" href="'.$item->getLink().'" title="'.$item->getTitle().'" '.$akey.'>'
+												.'<i class="">'.inlineSVG($item->getSvg()).'</i>'
+												. '<span class="a11y">'.$item->getLabel().'</span>'
+												. '</a></li>';
+										} else if (!isIrrelevant($item)) {
+											// Remember unimportant items for later
+											array_push($overflow_items, $item);
+										}
+									}
+
+									// Actually display them in an overflow menu
+									if(!empty($overflow_items)) {
+										echo '<li class="overflow"><a href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px"><path d="M0 0h24v24H0z" fill="none"/><path d="M12 8c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm0 2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"/></svg></i></a><div class="dropdown-menu">';
+										
+										foreach($overflow_items as $item) {
+											$accesskey = $item->getAccesskey();
+											$akey = '';
+											if($accesskey) {
+												$akey = 'accesskey="'.$accesskey.'" ';
+											}				
+											echo '<a class="dropdown-item '.$item->getType().' page-menu__link '.$item->getLinkAttributes('')['class'].'" href="'.$item->getLink().'" title="'.$item->getTitle().'" '.$akey.'><i class="">'.inlineSVG($item->getSvg()).'</i><span>'.$item->getLabel().'</span></a>';
+										}
+
+										echo '</div></li></html>';
+									}
+								?>
+							</div>
+						</div>
 
 						<hr />
 
