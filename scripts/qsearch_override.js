@@ -56,13 +56,13 @@
                 );
             };
 
-            dw_qsearch.$inObj.keyup(
+            dw_qsearch.$inObj.keydown(
                 function () {
                     if (dw_qsearch.timer) {
                         window.clearTimeout(dw_qsearch.timer);
                         dw_qsearch.timer = null;
                     }
-                    dw_qsearch.timer = window.setTimeout(do_qsearch, 500);
+                    dw_qsearch.timer = window.setTimeout(do_qsearch, 50);
                 }
             );
 
