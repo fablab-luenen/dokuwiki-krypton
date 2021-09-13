@@ -72,17 +72,22 @@ ol.breadcrumb {
     }
 }
 
-// Horizontal rules between breadcrumbs, content and footer
-main > hr {
-    margin-top: 1rem;
-    margin-bottom: 1rem;
+main {
+    display: flex;
+    flex-direction: column;
+
+    // Horizontal rules between breadcrumbs, content and footer
+    > hr {
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+    }
 }
 
 
-// ------ Main Content ------
-
+// ------ Content ------
 
 #dokuwiki__content {
+    flex-grow: 1;
 
     p {
         font-weight: 400;
@@ -349,6 +354,44 @@ textarea {
             margin: 0rem;
             overflow: hidden;
             height: 92%;
+        }
+
+        // Suggested pages while searching
+        .JSpopup.ajax_qsearch {
+            // Absolutely positioned
+            strong {
+                display: none; // Hide title
+            }
+            top: 3.5rem;
+            left: 1rem;
+            right: 0.5rem;
+
+            padding: 0.4rem 0;
+
+            border-radius: 0.5rem;
+            box-shadow: 0 0.25rem 1rem rgba(50, 50, 93, 0.25);
+            color: #525f7f;
+
+            li {
+                margin: 0;
+                padding: 0;
+
+                :hover {
+                    background-color: hsl(210, 50%, 98%);
+                }
+                :active, :focus {
+                    background-color: hsl(210, 30%, 83%);
+                }
+
+                a {
+                    color: unset;
+                    padding: 0.4rem 1.2rem;
+                    display: block;
+                    
+                    text-decoration: none;
+                }
+            }
+
         }
     }
 
@@ -628,4 +671,15 @@ footer {
     &.footer-card {
         background-color: unset;
     }
+}
+
+// ------ Transitions ------
+a {
+    :hover {
+        transition: 0.1s;
+    }
+    :active, :focus {
+        transition: 0.2s;
+    }
+    transition: 0.2s;
 }

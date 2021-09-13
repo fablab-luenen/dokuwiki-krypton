@@ -24622,11 +24622,18 @@ ol.breadcrumb .bchead {
   display: none;
 }
 
+main {
+  display: flex;
+  flex-direction: column;
+}
 main > hr {
   margin-top: 1rem;
   margin-bottom: 1rem;
 }
 
+#dokuwiki__content {
+  flex-grow: 1;
+}
 #dokuwiki__content p {
   font-weight: 400;
 }
@@ -24797,6 +24804,34 @@ textarea {
   overflow: hidden;
   height: 92%;
 }
+.doku_form .no .JSpopup.ajax_qsearch {
+  top: 3.5rem;
+  left: 1rem;
+  right: 0.5rem;
+  padding: 0.4rem 0;
+  border-radius: 0.5rem;
+  box-shadow: 0 0.25rem 1rem rgba(50, 50, 93, 0.25);
+  color: #525f7f;
+}
+.doku_form .no .JSpopup.ajax_qsearch strong {
+  display: none;
+}
+.doku_form .no .JSpopup.ajax_qsearch li {
+  margin: 0;
+  padding: 0;
+}
+.doku_form .no .JSpopup.ajax_qsearch li :hover {
+  background-color: #f7fafc;
+}
+.doku_form .no .JSpopup.ajax_qsearch li :active, .doku_form .no .JSpopup.ajax_qsearch li :focus {
+  background-color: #c7d4e1;
+}
+.doku_form .no .JSpopup.ajax_qsearch li a {
+  color: unset;
+  padding: 0.4rem 1.2rem;
+  display: block;
+  text-decoration: none;
+}
 
 .search-results-form button {
   margin-left: 3rem;
@@ -24956,6 +24991,16 @@ footer .argon-doku-footer-fullmenu li:nth-of-type(1) {
 }
 footer.footer-card {
   background-color: unset;
+}
+
+a {
+  transition: 0.2s;
+}
+a :hover {
+  transition: 0.1s;
+}
+a :active, a :focus {
+  transition: 0.2s;
 }
 
 /*# sourceMappingURL=doku.css.map */
