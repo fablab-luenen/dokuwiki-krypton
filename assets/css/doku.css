@@ -24535,6 +24535,10 @@ ol.breadcrumb .bchead {
   display: none;
 }
 
+main {
+  display: flex;
+  flex-direction: column;
+}
 main > hr {
   margin-top: 1rem;
   margin-bottom: 1rem;
