@@ -72,15 +72,19 @@ ol.breadcrumb {
     }
 }
 
-// Horizontal rules between breadcrumbs, content and footer
-main > hr {
-    margin-top: 1rem;
-    margin-bottom: 1rem;
+main {
+    display: flex;
+    flex-direction: column;
+
+    // Horizontal rules between breadcrumbs, content and footer
+    > hr {
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+    }
 }
 
 
-// ------ Main Content ------
-
+// ------ Content ------
 
 #dokuwiki__content {
 
