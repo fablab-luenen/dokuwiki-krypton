@@ -379,7 +379,7 @@ textarea {
                 :hover {
                     background-color: hsl(210, 50%, 98%);
                 }
-                :active, :focus {
+                :active, :focus, .active {
                     background-color: hsl(210, 30%, 83%);
                 }
 
@@ -678,7 +678,7 @@ a {
     :hover {
         transition: 0.1s;
     }
-    :active, :focus {
+    :active, :focus, .active {
         transition: 0.2s;
     }
     transition: 0.2s;

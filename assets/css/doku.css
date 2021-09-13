@@ -24823,7 +24823,7 @@ textarea {
 .doku_form .no .JSpopup.ajax_qsearch li :hover {
   background-color: #f7fafc;
 }
-.doku_form .no .JSpopup.ajax_qsearch li :active, .doku_form .no .JSpopup.ajax_qsearch li :focus {
+.doku_form .no .JSpopup.ajax_qsearch li :active, .doku_form .no .JSpopup.ajax_qsearch li :focus, .doku_form .no .JSpopup.ajax_qsearch li .active {
   background-color: #c7d4e1;
 }
 .doku_form .no .JSpopup.ajax_qsearch li a {
@@ -24999,7 +24999,7 @@ a {
 a :hover {
   transition: 0.1s;
 }
-a :active, a :focus {
+a :active, a :focus, a .active {
   transition: 0.2s;
 }
 
