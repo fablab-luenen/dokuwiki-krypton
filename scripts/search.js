@@ -7,9 +7,15 @@ let searchBar = document.querySelector("#qsearch__in");
 searchBar.autocomplete = "off";
 
 
-/////// Keyboard navigation
-
+/////// Common
 var searchPopupResults;
+const searchPopupObserver = new MutationObserver((event) => {
+    searchPopupResults = Array.from(document.querySelectorAll("#qsearch__out ul li a"));
+    highlightActiveResult(activeResultId);
+});
+searchPopupObserver.observe(searchPopup, {childList: true});
+
+/////// Keyboard navigation
 var activeResultId;
 
 /** Get the DOM element of an active result from its id */
@@ -26,13 +32,6 @@ function highlightActiveResult(activeResultId) {
     searchPopupResults.forEach(e => e.classList.remove(activeClass)); // Clear other results
     activeResult.classList.add(activeClass);
 }
-
-// Listen to popup changing
-const searchPopupObserver = new MutationObserver((event) => {
-    searchPopupResults = Array.from(document.querySelectorAll("#qsearch__out ul li a"));
-    highlightActiveResult(activeResultId);
-});
-searchPopupObserver.observe(searchPopup, {childList: true});
 
 searchBar.addEventListener("keydown", function(event){
     if(!searchPopupResults) return; // List has not loaded yet
