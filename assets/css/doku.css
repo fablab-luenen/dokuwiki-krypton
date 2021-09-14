@@ -24544,9 +24544,6 @@ main > hr {
   margin-bottom: 1rem;
 }
 
-#dokuwiki__content {
-  flex-grow: 1;
-}
 #dokuwiki__content p {
   font-weight: 400;
 }
