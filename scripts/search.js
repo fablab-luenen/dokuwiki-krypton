@@ -18,7 +18,7 @@ const searchPopupObserver = new MutationObserver((event) => {
 searchPopupObserver.observe(searchPopup, {childList: true});
 
 searchBar.addEventListener("keydown", function(event){
-    keyboardNavigation(event.key);
+    keyboardNavigation(event);
 });
 
 /////// Keyboard navigation
@@ -39,21 +39,24 @@ function highlightActiveResult(activeResultId) {
     activeResult.classList.add(activeClass);
 }
 
-function keyboardNavigation(key) {
+function keyboardNavigation(event) {
     if(!searchPopupResults) return; // List has not loaded yet
 
     let activeResult = getActiveResult(activeResultId);
     let activeIndex = searchPopupResults.findIndex(e => e == activeResult);
 
-    switch (key) {
+    switch (event.key) {
         case "ArrowDown":
             activeIndex++;
+            event.preventDefault();
             break;
         case "ArrowUp":
             activeIndex--;
+            event.preventDefault();
             break;
         case "Enter":
             // Navigate there
+            event.preventDefault();
             activeResult?.click();
             break;
     }
