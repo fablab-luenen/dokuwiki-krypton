@@ -24691,6 +24691,16 @@ textarea {
   margin-right: 1rem;
 }
 
+body .prosemirror_wrapper .menubar {
+  top: 4.5rem;
+}
+
+button.button.plugin_prosemirror_useWYSIWYG {
+  right: 7.25rem;
+  top: 2.4rem;
+  font-size: 0.75em;
+}
+
 .ct-toc #dw__toc {
   float: inherit;
   margin: inherit;

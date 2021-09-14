@@ -249,7 +249,7 @@ textarea {
     max-width: 100% !important;
 }
 
-.editBar {
+.editBar { 
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -299,6 +299,18 @@ textarea {
             }
         }
     }
+}
+
+// Visual editor (Prosemirror)
+body .prosemirror_wrapper .menubar { // override default top value ... i should change this
+    top: 4.5rem; // Offset by header bar height
+}
+
+button.button.plugin_prosemirror_useWYSIWYG {
+    right: 7.25rem;
+    top: 2.4rem;
+
+    font-size: 0.75em;
 }
 
 // ------ Table of Contents ------
