@@ -75,12 +75,15 @@ function createPageItem() {
 
     let pageName = searchBar.value;
 
-    // Do not add this button if the page is already in the list
-    if(searchPopupResults.find(e => e.attributes["data-wiki-id"].value == pageName)) console.log("found");
+    // Do not add this button if the page is already in the list or the query is empty
+    let isPageNameInList = searchPopupResults.find(e => e.attributes["data-wiki-id"].value == pageName && !e.classList.contains("createButton"));
+    if(pageName == "" || isPageNameInList) {
+        return;
+    }
 
     let addIcon = '<svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000"><path d="M0 0h24v24H0z" fill="none"/><path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/></svg>';
     
     // We can't do anything on empty result lists yet, because no suggestion popup will show up. Might fix this in qsearch. 
     let resultsList = document.querySelector("#qsearch__out ul");
-    resultsList?.insertAdjacentHTML("beforeend", `<li><a href="/${pageName}?do=edit" data-wiki-id="${pageName}">${addIcon} ${pageName} </a></li>`); 
+    resultsList?.insertAdjacentHTML("beforeend", `<li><a href="/${pageName}?do=edit" data-wiki-id="${pageName}" class="createButton">${addIcon} ${pageName} </a></li>`); 
 }
