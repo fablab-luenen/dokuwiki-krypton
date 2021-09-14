@@ -1,6 +1,4 @@
 function setupSearch() {
-    console.log("Setting up search");
-
     // Prevent empty search popup from showing up on load
     let searchPopup = document.querySelector("#qsearch__out");
     searchPopup.style.display = "none";
@@ -100,8 +98,6 @@ function setupSearch() {
 
     // Replace search bar placeholder text
     searchBar.placeholder = LANG.template.krypton.searchOrCreatePage;
-
-    console.log("Search set up");
 }
 
 window.addEventListener("DOMContentLoaded", setupSearch);
