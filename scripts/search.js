@@ -13,7 +13,7 @@ const searchPopupObserver = new MutationObserver((event) => {
     createPageItem();
 
     searchPopupResults = Array.from(document.querySelectorAll("#qsearch__out ul li a"));
-    highlightActiveResult(activeResultId);
+    keyboardNavigation();
 });
 searchPopupObserver.observe(searchPopup, {childList: true});
 
@@ -43,9 +43,15 @@ function keyboardNavigation(event) {
     if(!searchPopupResults) return; // List has not loaded yet
 
     let activeResult = getActiveResult(activeResultId);
-    let activeIndex = searchPopupResults.findIndex(e => e == activeResult);
 
-    switch (event.key) {
+    let activeIndex;
+    if(!event) {
+        activeIndex = 0;
+    } else { 
+        activeIndex = searchPopupResults.findIndex(e => e == activeResult);
+    }
+
+    switch (event?.key) {
         case "ArrowDown":
             activeIndex++;
             event.preventDefault();
