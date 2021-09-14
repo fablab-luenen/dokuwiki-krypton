@@ -4,6 +4,12 @@ An evolution of the great [Argon template](https://github.com/IceWreck/Argon-Dok
 
 A part of the [dokuwiki-preconfigured](https://github.com/fablab-luenen/dokuwiki-preconfigured/) project. 
 
+A lot is still to do, but a lot has already been done. Have a look around!
+
+![Screenshot 1: Main page with quick search open](https://i.imgur.com/HvCnAFC.png)
+
+![Screenshot 2: Editing a page using the visual editor](https://i.imgur.com/mmVrJkL.png)
+
 ## Goals / Improvements over Argon
 
 - Sticky/docking page buttons for long pages
