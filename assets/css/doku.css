@@ -24655,6 +24655,10 @@ textarea {
   align-items: center;
   align-content: center;
   justify-content: center;
+  position: sticky;
+  bottom: 0;
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 0 1rem;
 }
 .editBar .editButtons {
   flex-grow: 0;
@@ -24662,11 +24666,10 @@ textarea {
 }
 .editBar .editButtons button {
   margin-right: 0.2rem;
-  width: 7rem;
+  width: 6rem;
 }
 .editBar .summary {
   flex-grow: 1;
-  flex-shrink: 30;
 }
 .editBar .summary label.nowrap {
   width: 100%;
@@ -24680,6 +24683,7 @@ textarea {
   width: 12rem;
   box-sizing: border-box;
   flex-grow: 1;
+  margin: 0.5rem auto;
 }
 .editBar .summary label.nowrap span {
   width: auto;

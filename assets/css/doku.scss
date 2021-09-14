@@ -258,6 +258,11 @@ textarea {
     align-content: center;
     justify-content: center;
 
+    position: sticky;
+    bottom: 0;
+
+    background-color: hsla(0, 0%, 100%, 0.9);
+    padding: 0 1rem;
 
     .editButtons {
         flex-grow: 0;
@@ -265,14 +270,12 @@ textarea {
 
         button {
             margin-right: 0.2rem;
-            width: 7rem;
+            width: 6rem;
         }
     }
 
     .summary {
-        // flex: 1;
         flex-grow: 1;
-        flex-shrink: 30;
         
         label.nowrap {
             width: 100%;
@@ -287,6 +290,7 @@ textarea {
                 width: 12rem;
                 box-sizing: border-box;
                 flex-grow: 1;
+                margin: 0.5rem auto;
             }
             span {
                 width: auto;
