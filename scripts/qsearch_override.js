@@ -98,8 +98,8 @@
                 }
             );
 
-            // attach eventhandler to output field
-            dw_qsearch.$outObj.click(dw_qsearch.clear_results);
+            // Show the search results when the search field is clicked
+            dw_qsearch.$inObj.click(do_qsearch);
         },
 
         /**
