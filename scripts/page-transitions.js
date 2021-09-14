@@ -1,4 +1,4 @@
-const swup = new Swup();
+const swup = new Swup({linkSelector: 'a:not([href*="logout"])'});
 
 // Start Visual Editor
 function setupVisualEditor() {
