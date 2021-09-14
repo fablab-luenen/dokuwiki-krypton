@@ -8,6 +8,7 @@ if (!defined('DOKU_INC')) {
 $showTools = !tpl_getConf('hideTools') || (tpl_getConf('hideTools') && !empty($_SERVER['REMOTE_USER']));
 $showSidebar = page_findnearest($conf['sidebar']) && ($ACT == 'show');
 $showIcon = tpl_getConf('showIcon');
+$showBackground = tpl_getConf('headerBackgroundImage');
 ?>
 <!DOCTYPE html>
 <html lang="<?php echo $conf['lang'] ?>" dir="<?php echo $lang['direction'] ?>">
@@ -45,7 +46,17 @@ $showIcon = tpl_getConf('showIcon');
 		<!-- CSS Files -->
 		<link href="<?php echo tpl_basedir(); ?>assets/css/doku.css" rel="stylesheet" />
 
-
+		<!-- Conditional styles -->
+		<style>
+			<?php if($showBackground) { ?>
+			header {
+				background-image: url("<?php
+					$backgroundUrl = tpl_getMediaFile(array(':header-background.svg', ':header-background.png',':wiki:header-background.svg', 'images/header-background.svg', ':wiki:header-background.png', ':header-background.svg', ':header-background.png', 'images/header-background.svg', 'images/header-background.png', /*fall back to logos*/ 'images/logo.svg', 'images/logo.png', ':wiki:logo.svg', ':wiki:logo.png', ':logo.svg', ':logo.png', ':wiki:dokuwiki-128.png'), false);
+					echo($backgroundUrl);
+			     ?>");
+			}
+			<?php } ?>
+		</style>
 	</head>
 
 	<body class="docs ">
@@ -53,7 +64,7 @@ $showIcon = tpl_getConf('showIcon');
 
 
 			<header
-				class="navbar navbar-horizontal navbar-expand navbar-dark flex-row align-items-md-center ct-navbar bg-primary py-2">
+				class="navbar navbar-horizontal navbar-expand navbar-dark flex-row align-items-md-center ct-navbar bg-primary py-2<?php if(showBackground) { echo(" backgroundImage"); }?>">
 
 				<?php
 				if ($showIcon) {

@@ -10,3 +10,4 @@ $conf['hideTools']        = 0;
 $conf['movePageTools']    = 0; 
 $conf['showIcon']         = 1;
 $conf['showBottomTools']  = 0;
+$conf['headerBackgroundImage'] = 0;

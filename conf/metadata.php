@@ -10,3 +10,4 @@ $meta['hideTools']        = array('onoff');
 $meta['movePageTools']    = array('onoff'); 
 $meta['showIcon']         = array('onoff');
 $meta['showBottomTools']  = array('onoff');
+$meta['headerBackgroundImage'] = array('onoff');
