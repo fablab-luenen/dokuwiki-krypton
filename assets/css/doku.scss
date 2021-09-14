@@ -323,6 +323,13 @@ textarea {
     }
 }
 
+.editBox .license {
+    margin-top: 0.5rem;
+    text-align: center;
+    font-size: 0.8em;
+    opacity: 0.65;
+}
+
 // Visual editor (Prosemirror)
 body .prosemirror_wrapper .menubar { // override default top value ... i should change this
     top: 4.5rem; // Offset by header bar height

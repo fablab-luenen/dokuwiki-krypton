@@ -24708,6 +24708,13 @@ textarea {
   width: auto;
 }
 
+.editBox .license {
+  margin-top: 0.5rem;
+  text-align: center;
+  font-size: 0.8em;
+  opacity: 0.65;
+}
+
 body .prosemirror_wrapper .menubar {
   top: 4.5rem;
 }
