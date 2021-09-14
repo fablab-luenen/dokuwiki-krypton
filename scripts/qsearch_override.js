@@ -110,11 +110,11 @@
         },
 
         /**
-         * Empty and hide the output div
+         * Empty the output div
          */
         clear_results: function () {
-            dw_qsearch.$outObj.hide();
-            dw_qsearch.$outObj.text('');
+            // Keep the unordered list for other scripts to attach to
+            dw_qsearch.$outObj.html('<ul></ul>');
         },
 
         /**
