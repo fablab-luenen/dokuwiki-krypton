@@ -72,22 +72,17 @@ ol.breadcrumb {
     }
 }
 
-main {
-    display: flex;
-    flex-direction: column;
-
-    // Horizontal rules between breadcrumbs, content and footer
-    > hr {
-        margin-top: 1rem;
-        margin-bottom: 1rem;
-    }
+// Horizontal rules between breadcrumbs, content and footer
+main > hr {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
 }
 
 
-// ------ Content ------
+// ------ Main Content ------
+
 
 #dokuwiki__content {
-    flex-grow: 1;
 
     p {
         font-weight: 400;
@@ -338,7 +333,7 @@ textarea {
 
         #qsearch__in {
             @extend .form-control;
-            width: 10rem;
+            width: 16rem;
             height: 1.5rem;
             margin: 0rem;
             margin-right: 1rem;
@@ -346,14 +341,52 @@ textarea {
             border-radius: 0.25rem !important;
             overflow: hidden;
             border: none;
+            padding-left: 2rem;
         }
 
+        // Search icon button, integrated into search bar
         button {
-            @extend .btn;
-            @extend .btn-neutral;
-            margin: 0rem;
-            overflow: hidden;
-            height: 92%;
+            // Make it mostly invisible
+            color: transparent;
+            border: none;
+            background-color: transparent;
+            box-shadow: none;
+
+            // Icon
+            background-image: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20height%3D%2224px%22%20viewBox%3D%220%200%2024%2024%22%20width%3D%2224px%22%20fill%3D%22%23000000%22%3E%3Cpath%20d%3D%22M0%200h24v24H0z%22%20fill%3D%22none%22%2F%3E%3Cpath%20d%3D%22M15.5%2014h-.79l-.28-.27C15.41%2012.59%2016%2011.11%2016%209.5%2016%205.91%2013.09%203%209.5%203S3%205.91%203%209.5%205.91%2016%209.5%2016c1.61%200%203.09-.59%204.23-1.57l.27.28v.79l5%204.99L20.49%2019l-4.99-5zm-6%200C7.01%2014%205%2011.99%205%209.5S7.01%205%209.5%205%2014%207.01%2014%209.5%2011.99%2014%209.5%2014z%22%2F%3E%3C%2Fsvg%3E");
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: 45%;
+
+            // Position
+            position: absolute;
+            top: 0.098rem;
+            right: 1.125rem;
+            z-index: 3; // Otherwise obscured by the search bar
+            width: 1rem;
+
+            border-radius: 0.8rem;
+            opacity: 0.5;
+
+            // Animation
+            transition: 0.4s;
+
+            :hover {
+                background-color: red;
+            }
+        }
+
+        // Doesn't work inside the button
+        button[type="submit"]:not(:disabled):not(.disabled):active {
+            color: transparent;
+            border: none;
+            background-color: hsla(0, 0%, 0%, 0.2);
+            opacity: 1;
+        }
+        button[type="submit"]:not(:disabled):not(.disabled):hover {
+            background-color: hsla(0, 0%, 0%, 0.1);
+            transition: 0.25s;
+            opacity: 0.8;
         }
 
         // Suggested pages while searching
@@ -364,7 +397,7 @@ textarea {
             }
             top: 3.5rem;
             left: 1rem;
-            right: 0.5rem;
+            right: 0.95rem;
 
             padding: 0.4rem 0;
 
@@ -379,7 +412,7 @@ textarea {
                 :hover {
                     background-color: hsl(210, 50%, 98%);
                 }
-                :active, :focus {
+                :active, :focus, .active {
                     background-color: hsl(210, 30%, 83%);
                 }
 
@@ -389,6 +422,24 @@ textarea {
                     display: block;
                     
                     text-decoration: none;
+
+                    &.createButton {
+                        opacity: 0.5;
+
+                        &:hover, &:active, &:focus, &.active {
+                            opacity: 1;
+                        }
+                    }
+                }
+
+                // Add icon
+                svg {
+                    height: 1.5em;
+                    vertical-align: bottom;
+                    margin-left: -0.5em;
+                    margin-right: 0.15em;
+                    margin-top: -0.05em;
+                    fill:#525f7f;
                 }
             }
 
@@ -678,7 +729,7 @@ a {
     :hover {
         transition: 0.1s;
     }
-    :active, :focus {
+    :active, :focus, .active {
         transition: 0.2s;
     }
     transition: 0.2s;
