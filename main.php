@@ -343,7 +343,10 @@ $showIcon = tpl_getConf('showIcon');
 										</div>
 									</div>
 									<br/>
+									
 									<div class="row">
+									<?php if (tpl_getConf('showBottomTools')): ?>
+									
 									<div class="argon-doku-footer-fullmenu">
 										<?php
 										$menu_items = (new \dokuwiki\Menu\MobileMenu())->getItems();
@@ -356,6 +359,7 @@ $showIcon = tpl_getConf('showIcon');
 										}
 										?>
 									</div>
+									<?php endif; ?>
 									<?php tpl_includeFile('footer.html') ?>
 									</div>
 
