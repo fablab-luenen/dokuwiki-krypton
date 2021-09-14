@@ -332,7 +332,7 @@ textarea {
 
 // Visual editor (Prosemirror)
 body .prosemirror_wrapper .menubar { // override default top value ... i should change this
-    top: 4.5rem; // Offset by header bar height
+    top: 5rem; // Offset by header bar height
 }
 
 button.button.plugin_prosemirror_useWYSIWYG {
