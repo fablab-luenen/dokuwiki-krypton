@@ -66,7 +66,7 @@ $showIcon = tpl_getConf('showIcon');
 						// display logo and wiki title in a link to the home page
 						tpl_link(
 							wl(),
-							'<img src="'.$logo.'" width="30px" alt="" /> <span>'.$conf['title'].'</span>',
+							'<img src="'.$logo.'" height="48px" alt="" /> <span>'.$conf['title'].'</span>',
 							'accesskey="h" title="[H]"'
 						);
 						?>

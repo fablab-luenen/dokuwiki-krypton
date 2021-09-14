@@ -24752,7 +24752,7 @@ button.button.plugin_prosemirror_useWYSIWYG {
   border-radius: 1rem;
 }
 .header-title a img {
-  width: 3rem;
+  height: 3rem;
   margin-left: 0.5rem;
   margin-right: 0.5rem;
 }
