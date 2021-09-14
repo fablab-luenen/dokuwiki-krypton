@@ -397,16 +397,17 @@ button.button.plugin_prosemirror_useWYSIWYG {
             vertical-align: middle;
         }
     
-        &:active, &:hover {
+        &:active, &:hover, &:focus {
             color: unset; // Unset or inherit are gray
             text-decoration: unset;
         }
 
-        &:hover {
-            letter-spacing: 0.05rem;
+        &:hover, &:focus {
+            letter-spacing: 0.025rem;
         }
         &:active {
-            letter-spacing: 0rem;
+            letter-spacing: unset;
+            transition: 0.1s;
         }
     }
 }

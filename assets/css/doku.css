@@ -24759,15 +24759,16 @@ button.button.plugin_prosemirror_useWYSIWYG {
 .header-title a span {
   vertical-align: middle;
 }
-.header-title a:active, .header-title a:hover {
+.header-title a:active, .header-title a:hover, .header-title a:focus {
   color: unset;
   text-decoration: unset;
 }
-.header-title a:hover {
-  letter-spacing: 0.05rem;
+.header-title a:hover, .header-title a:focus {
+  letter-spacing: 0.025rem;
 }
 .header-title a:active {
-  letter-spacing: 0rem;
+  letter-spacing: unset;
+  transition: 0.1s;
 }
 
 .argon-doku-navbar-icon {
