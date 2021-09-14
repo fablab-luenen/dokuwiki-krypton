@@ -242,7 +242,7 @@ $showIcon = tpl_getConf('showIcon');
 									// Check if the button should be shown outside of the overflow menu or not
 									function isImportant($item) {
 										// Class names of buttons that should be shown directly on the page. Page source is deliberately omitted. 
-										$important_items = array("edit", "show", "create");
+										$important_items = array("edit", "show", "create", "draft");
 
 										if(in_array($item->getLinkAttributes('')['class'], $important_items)) {
 											return true;
