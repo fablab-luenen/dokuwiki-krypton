@@ -25049,6 +25049,10 @@ footer .argon-doku-footer-fullmenu li:nth-of-type(1) {
 footer.footer-card {
   background-color: unset;
 }
+footer .card-body {
+  padding-top: 0;
+  padding-bottom: 0;
+}
 
 a {
   transition: 0.2s;

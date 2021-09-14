@@ -342,7 +342,6 @@ $showIcon = tpl_getConf('showIcon');
 											</div>
 										</div>
 									</div>
-									<br/>
 									
 									<div class="row">
 									<?php if (tpl_getConf('showBottomTools')): ?>

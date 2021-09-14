@@ -848,6 +848,11 @@ footer {
     &.footer-card {
         background-color: unset;
     }
+
+    .card-body {
+        padding-top: 0;
+        padding-bottom: 0;
+    }
 }
 
 // ------ Transitions ------
