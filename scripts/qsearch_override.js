@@ -57,7 +57,16 @@
             };
 
             dw_qsearch.$inObj.keydown(
-                function () {
+                function (event) {
+                    // Abort if the key pressed is a navigation key
+                    switch (event.key) {
+                        case "ArrowDown": return;
+                        case "ArrowUp": return;
+                        case "ArrowLeft": return;
+                        case "ArrowRight": return;
+                        case "Enter": return;
+                    }
+
                     if (dw_qsearch.timer) {
                         window.clearTimeout(dw_qsearch.timer);
                         dw_qsearch.timer = null;
