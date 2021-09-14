@@ -91,5 +91,5 @@ function createPageItem() {
     
     // We can't do anything on empty result lists yet, because no suggestion popup will show up. Might fix this in qsearch. 
     let resultsList = document.querySelector("#qsearch__out ul");
-    resultsList?.insertAdjacentHTML("beforeend", `<li><a href="/${pageName}?do=edit" data-wiki-id="${pageName}" class="createButton">${addIcon} ${pageName} </a></li>`); 
+    resultsList?.insertAdjacentHTML("beforeend", `<li><a href="/${pageName}?do=edit" data-wiki-id="${pageName}" class="createButton" title="${LANG.template.krypton.createPage}">${addIcon} ${pageName} </a></li>`); 
 }
