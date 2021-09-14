@@ -24513,6 +24513,14 @@ select {
   background-color: white !important;
   border-radius: 0.25rem;
   border-color: #99979c;
+  border-width: 2px;
+  border-style: solid;
+  padding: 0.1rem 0.8rem;
+}
+input:focus,
+select:focus {
+  box-shadow: none;
+  border-color: black;
 }
 
 ::-moz-selection {
@@ -24640,8 +24648,43 @@ textarea {
   max-width: 100% !important;
 }
 
+.editBar {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+}
+.editBar .editButtons {
+  flex-grow: 0;
+  margin-right: 1.2rem;
+}
+.editBar .editButtons button {
+  margin-right: 0.2rem;
+  width: 7rem;
+}
 .editBar .summary {
-  display: block !important;
+  flex-grow: 1;
+  flex-shrink: 30;
+}
+.editBar .summary label.nowrap {
+  width: 100%;
+  margin: 0;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+}
+.editBar .summary label.nowrap input {
+  width: 12rem;
+  box-sizing: border-box;
+  flex-grow: 1;
+}
+.editBar .summary label.nowrap span {
+  width: auto;
+  text-align: right;
+  margin-right: 1rem;
 }
 
 .ct-toc #dw__toc {
