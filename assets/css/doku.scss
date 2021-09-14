@@ -390,6 +390,16 @@ textarea {
                     
                     text-decoration: none;
                 }
+
+                // Add icon
+                svg {
+                    height: 1.5em;
+                    vertical-align: bottom;
+                    margin-left: -0.5em;
+                    margin-right: 0.15em;
+                    margin-top: -0.05em;
+                    fill:#525f7f;
+                }
             }
 
         }
