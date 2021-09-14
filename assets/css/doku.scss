@@ -276,8 +276,12 @@ textarea {
 
     .summary {
         flex-grow: 1;
+        flex-wrap: nowrap;
+
+        display: flex;
+        flex-direction: row;
         
-        label.nowrap {
+        label.nowrap[for="edit__summary"] {
             width: 100%;
             margin: 0;
 
@@ -298,6 +302,24 @@ textarea {
                 margin-right: 1rem;
             }
         }
+        label.nowrap[for="minoredit"] {
+            margin: 0;
+            margin-left: 1em;
+
+            width: 12rem;
+            flex-shrink: 1;
+
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            align-items: center;
+
+            span {
+                margin-left: 0.5em;
+                width: auto;
+            }
+        }
+    
     }
 }
 

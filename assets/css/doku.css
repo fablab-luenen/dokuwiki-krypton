@@ -24670,8 +24670,11 @@ textarea {
 }
 .editBar .summary {
   flex-grow: 1;
+  flex-wrap: nowrap;
+  display: flex;
+  flex-direction: row;
 }
-.editBar .summary label.nowrap {
+.editBar .summary label.nowrap[for=edit__summary] {
   width: 100%;
   margin: 0;
   display: flex;
@@ -24679,16 +24682,30 @@ textarea {
   flex-wrap: nowrap;
   align-items: center;
 }
-.editBar .summary label.nowrap input {
+.editBar .summary label.nowrap[for=edit__summary] input {
   width: 12rem;
   box-sizing: border-box;
   flex-grow: 1;
   margin: 0.5rem auto;
 }
-.editBar .summary label.nowrap span {
+.editBar .summary label.nowrap[for=edit__summary] span {
   width: auto;
   text-align: right;
   margin-right: 1rem;
+}
+.editBar .summary label.nowrap[for=minoredit] {
+  margin: 0;
+  margin-left: 1em;
+  width: 12rem;
+  flex-shrink: 1;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+}
+.editBar .summary label.nowrap[for=minoredit] span {
+  margin-left: 0.5em;
+  width: auto;
 }
 
 body .prosemirror_wrapper .menubar {
