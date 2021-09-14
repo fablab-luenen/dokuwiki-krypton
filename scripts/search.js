@@ -93,3 +93,6 @@ function createPageItem() {
     let resultsList = document.querySelector("#qsearch__out ul");
     resultsList?.insertAdjacentHTML("beforeend", `<li><a href="/${pageName}?do=edit" data-wiki-id="${pageName}" class="createButton" title="${LANG.template.krypton.createPage}">${addIcon} ${pageName} </a></li>`); 
 }
+
+// Replace search bar placeholder text
+searchBar.placeholder = LANG.template.krypton.searchOrCreatePage;
