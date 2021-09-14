@@ -15,6 +15,10 @@ const searchPopupObserver = new MutationObserver((event) => {
 });
 searchPopupObserver.observe(searchPopup, {childList: true});
 
+searchBar.addEventListener("keydown", function(event){
+    keyboardNavigationKeyDown(event.key);
+});
+
 /////// Keyboard navigation
 var activeResultId;
 
@@ -33,13 +37,13 @@ function highlightActiveResult(activeResultId) {
     activeResult.classList.add(activeClass);
 }
 
-searchBar.addEventListener("keydown", function(event){
+function keyboardNavigation(key) {
     if(!searchPopupResults) return; // List has not loaded yet
 
     let activeResult = getActiveResult(activeResultId);
     let activeIndex = searchPopupResults.findIndex(e => e == activeResult);
 
-    switch (event.key) {
+    switch (key) {
         case "ArrowDown":
             activeIndex++;
             break;
@@ -57,4 +61,3 @@ searchBar.addEventListener("keydown", function(event){
 
     activeResultId = searchPopupResults[activeIndex].attributes["data-wiki-id"].value;
     highlightActiveResult(activeResultId);
-});
