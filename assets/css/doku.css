@@ -24748,7 +24748,7 @@ textarea {
 .doku_form .no .JSpopup.ajax_qsearch {
   top: 3.5rem;
   left: 1rem;
-  right: 0.5rem;
+  right: 0.95rem;
   padding: 0.4rem 0;
   border-radius: 0.5rem;
   box-shadow: 0 0.25rem 1rem rgba(50, 50, 93, 0.25);
