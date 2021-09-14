@@ -213,7 +213,7 @@ $showBackground = tpl_getConf('headerBackgroundImage');
 
 					<!-- center content -->
 
-					<main class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5 ct-content dokuwiki" role="main">
+					<main class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5 ct-content dokuwiki" role="main" id="swup">
 
 						<div id="dokuwiki__top" class="site
 						<?php echo tpl_classes(); ?>
