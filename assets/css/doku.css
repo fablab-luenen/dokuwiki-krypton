@@ -24718,6 +24718,9 @@ textarea {
 body .prosemirror_wrapper .menubar {
   top: 5rem;
 }
+body .prosemirror_wrapper .ProseMirror {
+  min-height: 50vh;
+}
 
 button.button.plugin_prosemirror_useWYSIWYG {
   right: 7.25rem;
