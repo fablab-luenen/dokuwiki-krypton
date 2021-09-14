@@ -130,10 +130,6 @@
 
             dw_qsearch.curRequest = null;
 
-            if (data === '') {
-                dw_qsearch.clear_results();
-                return;
-            }
 
             dw_qsearch.$outObj
                 .html(data)
@@ -155,6 +151,11 @@
                 too_big = function (l) {
                     return l.offsetWidth + l.offsetLeft > max;
                 };
+            }
+
+            if (data === '') {
+                dw_qsearch.clear_results();
+                return;
             }
 
             $links.each(function () {
