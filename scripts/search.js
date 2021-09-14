@@ -66,6 +66,10 @@ function setupSearch() {
                 // Navigate there
                 event.preventDefault();
                 activeResult?.click();
+
+                // Reset search bar (relevant when doing in-page loading)
+                searchBar.value = "";
+                document.activeElement.blur();
                 break;
         }
 
