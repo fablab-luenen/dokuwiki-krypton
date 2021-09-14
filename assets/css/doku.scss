@@ -377,10 +377,38 @@ button.button.plugin_prosemirror_useWYSIWYG {
 
 // ------ Navbar ------
 
-.header-title a {
+.header-title {
     color: white;
-    font-weight: 600;
-    font-size: 1.2rem;
+    a {
+        font-size: 1.5rem;
+        color: unset;
+
+        display: block; // Makes the whole box a click target
+        padding-right: 1rem;
+        border-radius: 1rem;
+
+        img {
+            width: 3rem;
+            margin-left: 0.5rem;
+            margin-right: 0.5rem;
+        }
+
+        span {
+            vertical-align: middle;
+        }
+    
+        &:active, &:hover {
+            color: unset; // Unset or inherit are gray
+            text-decoration: unset;
+        }
+
+        &:hover {
+            letter-spacing: 0.05rem;
+        }
+        &:active {
+            letter-spacing: 0rem;
+        }
+    }
 }
 
 // Navbar Icons
