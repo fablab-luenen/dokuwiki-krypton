@@ -24773,6 +24773,12 @@ textarea {
   display: block;
   text-decoration: none;
 }
+.doku_form .no .JSpopup.ajax_qsearch li a.createButton {
+  opacity: 0.5;
+}
+.doku_form .no .JSpopup.ajax_qsearch li a.createButton:hover, .doku_form .no .JSpopup.ajax_qsearch li a.createButton:active, .doku_form .no .JSpopup.ajax_qsearch li a.createButton:focus, .doku_form .no .JSpopup.ajax_qsearch li a.createButton.active {
+  opacity: 1;
+}
 .doku_form .no .JSpopup.ajax_qsearch li svg {
   height: 1.5em;
   vertical-align: bottom;

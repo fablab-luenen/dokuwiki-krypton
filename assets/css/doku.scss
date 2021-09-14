@@ -427,6 +427,14 @@ textarea {
                     display: block;
                     
                     text-decoration: none;
+
+                    &.createButton {
+                        opacity: 0.5;
+
+                        &:hover, &:active, &:focus, &.active {
+                            opacity: 1;
+                        }
+                    }
                 }
 
                 // Add icon
