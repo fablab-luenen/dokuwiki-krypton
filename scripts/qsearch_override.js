@@ -58,13 +58,36 @@
 
             dw_qsearch.$inObj.keydown(
                 function (event) {
-                    // Abort if the key pressed is a navigation key
+                    // Abort if the key pressed is not a character
                     switch (event.key) {
                         case "ArrowDown": return;
                         case "ArrowUp": return;
                         case "ArrowLeft": return;
                         case "ArrowRight": return;
                         case "Enter": return;
+                        case "Shift": return;
+                        case "Escape": return;
+                        case "CapsLock": return;
+                        case "Meta": return;
+                        case "Alt": return;
+                        case "Tab": return;
+                        case "Control": return;
+                        case "ContextMenu": return;
+                        case "Clear": return;
+                        case "PageUp": return;
+                        case "PageDown": return;
+                        case "F1": return;
+                        case "F2": return;
+                        case "F3": return;
+                        case "F4": return;
+                        case "F5": return;
+                        case "F6": return;
+                        case "F7": return;
+                        case "F8": return;
+                        case "F9": return;
+                        case "F10": return;
+                        case "F12": return;
+                        case "F13": return;
                     }
 
                     if (dw_qsearch.timer) {
