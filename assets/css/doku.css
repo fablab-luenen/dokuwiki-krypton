@@ -25109,4 +25109,113 @@ a :active, a :focus, a .active {
   transition: 0.2s;
 }
 
+* {
+  box-sizing: border-box;
+}
+
+.dropdown__title {
+  background-color: transparent;
+  border: none;
+  font-family: inherit;
+}
+
+nav > ul {
+  grid-auto-flow: column;
+}
+nav > ul > li {
+  margin: 0 0.5rem;
+}
+nav > ul > li a,
+nav > ul > li .dropdown__title {
+  text-decoration: none;
+  text-align: center;
+  display: inline-block;
+  color: #fff;
+  font-size: 1.125rem;
+}
+nav > ul > li a:focus,
+nav > ul > li .dropdown__title:focus {
+  outline: none;
+}
+nav > ul > li > a,
+nav > ul > li .dropdown__title {
+  padding: 1rem 0.5rem;
+  transition: 280ms all 120ms ease-out;
+}
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+}
+nav ul li {
+  padding: 0;
+}
+
+.dropdown {
+  position: relative;
+  will-change: transform;
+  position: unset;
+  text-transform: unset;
+  letter-spacing: unset;
+  font-size: unset;
+}
+.dropdown button {
+  box-shadow: unset;
+}
+.dropdown .dropdown__title {
+  display: inline-flex;
+  align-items: center;
+}
+.dropdown .dropdown__title:after {
+  content: "";
+  border: 0.35rem solid transparent;
+  border-top-color: rgba(255, 255, 255, 0.45);
+  margin-left: 0.25em;
+  transform: translateY(0.15em);
+}
+.dropdown .dropdown__menu {
+  position: absolute;
+  min-width: 15ch;
+  left: 50%;
+  top: calc(100% - 0.25rem);
+  transition: 280ms all 120ms ease-out;
+  transform: rotateX(-90deg) translateX(-50%);
+  transform-origin: top center;
+  visibility: hidden;
+  opacity: 0.3;
+  padding: 0.5em 0;
+  background-color: #fff;
+  border-radius: 4px;
+  box-shadow: 0 0.15em 0.25em rgba(0, 0, 0, 0.25);
+}
+.dropdown .dropdown__menu a {
+  color: unset;
+  display: block;
+  padding: 0.5em;
+  opacity: 0;
+  transition: 280ms all 120ms ease-out;
+}
+.dropdown .dropdown__menu a:hover {
+  background-color: rgba(102, 51, 153, 0.15);
+}
+.dropdown .dropdown__menu a:focus {
+  outline: none;
+  background-color: rgba(102, 51, 153, 0.25);
+}
+.dropdown:hover .dropdown__title, .dropdown:active .dropdown__title, .dropdown:focus .dropdown__title, .dropdown:focus-within .dropdown__title {
+  border-top-color: pink;
+}
+.dropdown:hover .dropdown__menu, .dropdown:active .dropdown__menu, .dropdown:focus .dropdown__menu, .dropdown:focus-within .dropdown__menu {
+  opacity: 1;
+  transform: rotateX(0) translateX(-50%);
+  visibility: visible;
+}
+.dropdown:hover .dropdown__menu a, .dropdown:active .dropdown__menu a, .dropdown:focus .dropdown__menu a, .dropdown:focus-within .dropdown__menu a {
+  opacity: 1;
+}
+.dropdown:hover:after, .dropdown:active:after, .dropdown:focus:after, .dropdown:focus-within:after {
+  opacity: 1;
+}
+
 /*# sourceMappingURL=doku.css.map */
