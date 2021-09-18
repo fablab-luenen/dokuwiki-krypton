@@ -150,29 +150,6 @@ $showBackground = tpl_getConf('headerBackgroundImage');
 								echo '</li>';
 							}
 							?>
-							<?php if ($showTools && !tpl_getConf('movePageTools')): ?>
-							<div id="dokuwiki__pagetools" class="ct-toc-item active">
-								<a class="ct-toc-link">
-									<?php echo $lang['page_tools'] ?>
-								</a>
-								<ul class="nav ct-sidenav">
-									<?php
-									$menu_items = (new \dokuwiki\Menu\PageMenu())->getItems();
-									foreach($menu_items as $item) {
-										$accesskey = $item->getAccesskey();
-										$akey = '';
-										if($accesskey) {
-											$akey = 'accesskey="'.$accesskey.'" ';
-										}			
-										echo '<li class="'.$item->getType().'">'
-											.'<a class="'.$item->getLinkAttributes('')['class'].'" href="'.$item->getLink().'" title="'.$item->getTitle().'" '.$akey.'>'
-											. $item->getLabel()
-											. '</a></li>';
-										}
-									?>
-								</ul>
-							</div>
-							<?php endif;?>
 
 							<div class="ct-toc-item active">
 
