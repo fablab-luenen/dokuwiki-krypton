@@ -151,27 +151,6 @@ $showBackground = tpl_getConf('headerBackgroundImage');
 							}
 							?>
 
-							<div class="ct-toc-item active">
-
-								<a class="ct-toc-link">
-									<?php echo $lang['site_tools'] ?>
-								</a>
-								<ul class="nav ct-sidenav">
-									<?php
-									$menu_items = (new \dokuwiki\Menu\SiteMenu())->getItems();
-									foreach($menu_items as $item) {
-									echo '<li class="'.$item->getType().'">'
-										.'<a class="" href="'.$item->getLink().'" title="'.$item->getTitle().'">'
-										. $item->getLabel()
-										. '</a></li>';
-									}
-
-									?>
-								</ul>
-							</div>
-
-
-
 							<?php if ($showSidebar): ?>
 							<div id="dokuwiki__aside" class="ct-toc-item active">
 								<a class="ct-toc-link">
@@ -184,6 +163,23 @@ $showBackground = tpl_getConf('headerBackgroundImage');
 								</div>
 							</div>
 							<?php endif;?>
+
+							<div class="ct-toc-item active">
+								<a class="ct-toc-link">
+									<?php echo $lang['site_tools'] ?>
+								</a>
+								<ul class="nav ct-sidenav">
+									<?php
+									$menu_items = (new \dokuwiki\Menu\SiteMenu())->getItems();
+									foreach($menu_items as $item) {
+									echo '<li class="'.$item->getType().'">'
+										.'<a class="" href="'.$item->getLink().'" title="'.$item->getTitle().'">'
+										. $item->getLabel()
+										. '</a></li>';
+									}
+									?>
+								</ul>
+							</div>
 						</nav>
 					</div>
 
