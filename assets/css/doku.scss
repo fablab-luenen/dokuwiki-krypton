@@ -941,17 +941,11 @@ a {
 $color: rebeccapurple;
 $color-dark: scale-color($color, $lightness: -30%);
 
-$transition: 280ms all 120ms ease-out;
-
-* {
-    box-sizing: border-box;
-}
+$transition: 100ms all 0ms ease-out;
 
 .dropdown__title {
-    // Reset button styles
-    background-color: transparent;
-    border: none;
-    font-family: inherit;
+    
+
 }
 
 nav {
@@ -959,12 +953,11 @@ nav {
         grid-auto-flow: column;
 
         > li {
-            margin: 0 0.5rem;
 
             a,
             .dropdown__title {
                 text-decoration: none;
-                text-align: center;
+                text-align: unset;
                 display: inline-block;
                 color: #fff;
                 font-size: 1.125rem;
@@ -974,21 +967,22 @@ nav {
                 }
             }
 
-            > a,
-            .dropdown__title {
-                padding: 1rem 0.5rem;
-                // border-top: 3px solid transparent;
-                transition: $transition;
+            // > a,
+            // .dropdown__title {
+            //     padding: 1rem 0.5rem;
+            //     // border-top: 3px solid transparent;
+            //     transition: $transition;
 
-                &:hover,
-                &:focus {
-                    // border-top-color: pink;
-                    // color: pink;
-                }
-            }
+            //     &:hover,
+            //     &:focus {
+            //         // border-top-color: pink;
+            //         // color: pink;
+            //     }
+            // }
         }
     }
 
+    // Remove list-isms
     ul {
         list-style: none;
         margin: 0;
@@ -996,7 +990,7 @@ nav {
         display: grid;
 
         li {
-            padding: 0;
+            margin: 0;
         }
     }
 }
@@ -1012,7 +1006,40 @@ nav {
     font-size: unset;
 
     button {
+        // Reset argon styles
         box-shadow: unset;
+        background-color: transparent;
+        border: none;
+        font-family: inherit;
+        &:hover {
+            transform: unset;
+        }
+        &:not(:disabled):not(.disabled):active {
+            background-color: transparent;
+            color: inherit;
+        }
+    }
+
+    a {
+        // color: $color-dark;
+        color: unset;
+        display: block;
+        padding: 0.5em;
+        opacity: 0;
+        transition: $transition;
+
+        &:hover {
+            background-color: rgba($color, 0.15);
+            text-decoration: unset;
+        }
+        &:focus {
+            outline: none;
+            background-color: rgba($color, 0.25);
+            text-decoration: unset;
+        }
+        &:active {
+            color: unset;
+        }
     }
 
     .dropdown__title {
@@ -1044,23 +1071,7 @@ nav {
         border-radius: 4px;
         box-shadow: 0 0.15em 0.25em rgba(black, 0.25);
 
-        a {
-            // color: $color-dark;
-            color: unset;
-            display: block;
-            padding: 0.5em;
-            opacity: 0;
-            transition: $transition;
-
-            &:hover {
-                background-color: rgba($color, 0.15);
-            }
-
-            &:focus {
-                outline: none;
-                background-color: rgba($color, 0.25);
-            }
-        }
+        
     }
 
     // Active marker
@@ -1081,9 +1092,10 @@ nav {
     &:active, &:focus, // On click
     &:focus-within {
         .dropdown__title {
-            border-top-color: pink;
+            // border-top-color: pink;
         }
 
+        // Make visible
         .dropdown__menu {
             opacity: 1;
             transform: rotateX(0) translateX(-50%);
