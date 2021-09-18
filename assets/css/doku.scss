@@ -809,19 +809,69 @@ header.backgoundImage {
 
 // ------ Left Sidebar ------
 
+.ct-sidebar, .ct-sidenav {
+    // Links
+    .nav>li>a {
+        // font-size: 0.84rem;
+        font-size: inherit;
+        padding: 0;
+    }
+
+    ul {
+        padding: 0;
+    }
+}
+
+// Sidebar item block
+.ct-toc-item {
+    margin-left: 1rem;
+
+    font-size: 0.84rem;
+
+    // Heading
+    .ct-toc-link {
+        padding: .25rem 0.5rem;
+    }
+
+    p {
+        // Get rid of p styles from argon
+        font-size: unset;
+        font-weight: unset;
+        line-height: unset;
+
+        margin-bottom: 0.25rem;
+        margin-top: 0.25rem;
+    }
+
+    ul {
+        padding: 0;
+        margin-left: 0.5rem;
+        margin-bottom: 0;
+
+        li, div.li {
+            margin-left: 0.5rem;
+
+            margin-bottom: 0.125rem;
+            margin-top: 0.125rem;
+
+            list-style-type: none;
+
+            a {
+                padding: 0;
+            }
+        }
+    }
+
+    // Direct child of .leftsidebar
+     div > ul {
+         margin-bottom: 0.5rem;
+    }
+}
+
 .leftsidebar {
     .leftsidebar ul {
         @extend .nav,
         .ct-sidenav;
-    }
-
-    li {
-        list-style-type: none;
-        display: block;
-        font-size: 0.84rem;
-        padding: 0.25rem;
-        color: #4c555a;
-        font-weight: 400;
     }
 
     a:link,
@@ -835,11 +885,6 @@ header.backgoundImage {
     }
 
 }
-
-.ct-sidebar .nav>li>a {
-    font-size: 0.84rem;
-}
-
 
 // ------ Footer ------
 
