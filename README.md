@@ -10,6 +10,9 @@ A lot is still to do, but a lot has already been done. Have a look around!
 
 ![Screenshot 2: Editing a page using the visual editor](https://i.imgur.com/mmVrJkL.png)
 
+## Installation
+Use the following URL for manual installation in the extension manager: `https://github.com/fablab-luenen/dokuwiki-krypton/archive/refs/heads/krypton.zip`
+
 ## Goals / Improvements over Argon
 
 - Sticky/docking page buttons for long pages
