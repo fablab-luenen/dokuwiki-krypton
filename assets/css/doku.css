@@ -25025,14 +25025,46 @@ header.backgoundImage {
 #dw__login #remember__me {
   margin-top: 1rem;
 }
-.leftsidebar li {
-  list-style-type: none;
-  display: block;
-  font-size: 0.84rem;
-  padding: 0.25rem;
-  color: #4c555a;
-  font-weight: 400;
+.ct-sidebar .nav > li > a, .ct-sidebar .leftsidebar .leftsidebar ul > li > a, .leftsidebar .leftsidebar .ct-sidebar ul > li > a, .ct-sidenav .nav > li > a, .leftsidebar .leftsidebar ul .nav > li > a, .ct-sidenav .leftsidebar .leftsidebar ul > li > a, .leftsidebar .leftsidebar .ct-sidenav ul > li > a, .leftsidebar .leftsidebar ul ul > li > a {
+  font-size: inherit;
+  padding: 0;
 }
+.ct-sidebar ul, .ct-sidenav ul, .leftsidebar .leftsidebar ul ul {
+  padding: 0;
+}
+
+.ct-toc-item {
+  margin-left: 1rem;
+  font-size: 0.84rem;
+}
+.ct-toc-item .ct-toc-link {
+  padding: 0.25rem 0.5rem;
+}
+.ct-toc-item p {
+  font-size: unset;
+  font-weight: unset;
+  line-height: unset;
+  margin-bottom: 0.25rem;
+  margin-top: 0.25rem;
+}
+.ct-toc-item ul {
+  padding: 0;
+  margin-left: 0.5rem;
+  margin-bottom: 0;
+}
+.ct-toc-item ul li, .ct-toc-item ul div.li {
+  margin-left: 0.5rem;
+  margin-bottom: 0.125rem;
+  margin-top: 0.125rem;
+  list-style-type: none;
+}
+.ct-toc-item ul li a, .ct-toc-item ul div.li a {
+  padding: 0;
+}
+.ct-toc-item div > ul {
+  margin-bottom: 0.5rem;
+}
+
 .leftsidebar a:link,
 .leftsidebar a:visited {
   text-decoration: none;
@@ -25040,10 +25072,6 @@ header.backgoundImage {
 }
 .leftsidebar a:hover {
   color: #212529;
-}
-
-.ct-sidebar .nav > li > a, .ct-sidebar .leftsidebar .leftsidebar ul > li > a, .leftsidebar .leftsidebar .ct-sidebar ul > li > a {
-  font-size: 0.84rem;
 }
 
 footer {
