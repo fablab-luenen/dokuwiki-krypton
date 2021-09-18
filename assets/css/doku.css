@@ -25174,18 +25174,18 @@ nav ul li {
 .dropdown a:active {
   color: unset;
 }
-.dropdown .dropdown__title {
+.dropdown > button {
   display: inline-flex;
   align-items: center;
 }
-.dropdown .dropdown__title:after {
+.dropdown > button:after {
   content: "";
   border: 0.35rem solid transparent;
   border-top-color: rgba(255, 255, 255, 0.45);
   margin-left: 0.25em;
   transform: translateY(0.15em);
 }
-.dropdown .dropdown__menu {
+.dropdown .dropdown__menu, .dropdown > ul {
   position: absolute;
   min-width: 15ch;
   left: 50%;
@@ -25200,12 +25200,12 @@ nav ul li {
   border-radius: 4px;
   box-shadow: 0 0.15em 0.25em rgba(0, 0, 0, 0.25);
 }
-.dropdown:hover .dropdown__menu, .dropdown:active .dropdown__menu, .dropdown:focus .dropdown__menu, .dropdown:focus-within .dropdown__menu {
+.dropdown:hover > ul, .dropdown:active > ul, .dropdown:focus > ul, .dropdown:focus-within > ul {
   opacity: 1;
   transform: rotateX(0) translateX(-50%);
   visibility: visible;
 }
-.dropdown:hover .dropdown__menu a, .dropdown:active .dropdown__menu a, .dropdown:focus .dropdown__menu a, .dropdown:focus-within .dropdown__menu a {
+.dropdown:hover > ul a, .dropdown:active > ul a, .dropdown:focus > ul a, .dropdown:focus-within > ul a {
   opacity: 1;
 }
 .dropdown:hover:after, .dropdown:active:after, .dropdown:focus:after, .dropdown:focus-within:after {

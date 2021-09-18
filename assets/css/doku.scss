@@ -1042,7 +1042,8 @@ nav {
         }
     }
 
-    .dropdown__title {
+    // .dropdown__title, 
+    & > button {
         display: inline-flex;
         align-items: center;
 
@@ -1056,7 +1057,8 @@ nav {
         }
     }
 
-    .dropdown__menu {
+    .dropdown__menu, 
+    & > ul {
         position: absolute;
         min-width: 15ch;
         left: 50%;
@@ -1091,12 +1093,9 @@ nav {
     &:hover, // On hover
     &:active, &:focus, // On click
     &:focus-within {
-        .dropdown__title {
-            // border-top-color: pink;
-        }
-
         // Make visible
-        .dropdown__menu {
+        // .dropdown__menu, 
+        & > ul {
             opacity: 1;
             transform: rotateX(0) translateX(-50%);
             visibility: visible;
