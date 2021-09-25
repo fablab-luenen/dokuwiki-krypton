@@ -169,14 +169,6 @@ $showBackground = tpl_getConf('headerBackgroundImage');
 					<!-- left sidebar -->
 					<div class="col-12 col-md-3 col-xl-2 ct-sidebar">
 						<nav class="collapse ct-links" id="ct-docs-nav">
-							<?php
-							if (!empty($_SERVER['REMOTE_USER'])) {
-								echo '<li class="nav-item nav-link"> ';
-								tpl_userinfo();
-								echo '</li>';
-							}
-							?>
-
 							<?php if ($showSidebar): ?>
 							<div id="dokuwiki__aside" class="ct-toc-item active">
 								<a class="ct-toc-link">
