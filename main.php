@@ -96,19 +96,6 @@ $showBackground = tpl_getConf('headerBackgroundImage');
 
 				<div class="d-none d-sm-block ml-auto">
 					<ul class="navbar-nav ct-navbar-nav flex-row align-items-center">
-
-						<?php
-						$menu_items = (new \dokuwiki\Menu\UserMenu())->getItems();
-						foreach($menu_items as $item) {
-						echo '<li class="'.$item->getType().'">'
-							.'<a class="nav-link" href="'.$item->getLink().'" title="'.$item->getTitle().'">'
-							.'<i class="argon-doku-navbar-icon" aria-hidden="true">'.inlineSVG($item->getSvg()).'</i>'
-							. '<span class="a11y">'.$item->getLabel().'</span>'
-							. '</a></li>';
-						}
-
-						?>
-
 						<nav aria-label="Main Navigation" class="dropown"> 
 							<ul>
 								<li class="dropdown">
