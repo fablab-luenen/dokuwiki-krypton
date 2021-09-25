@@ -482,7 +482,6 @@ header.backgoundImage {
             height: 1.5rem;
             margin: 0rem;
             margin-right: 1rem;
-            margin-left: 1rem;
             border-radius: 0.25rem !important;
             overflow: hidden;
             border: none;
@@ -928,4 +927,180 @@ a {
         transition: 0.2s;
     }
     transition: 0.2s;
+}
+
+// ------ Header dropdown ------
+
+// From https://moderncss.dev/css-only-accessible-dropdown-navigation-menu/
+.dropdown {
+    $transition: 250ms all 0ms ease-out;
+
+    $title-color: white;
+    $color-dark: scale-color($title-color, $lightness: -30%);
+
+    $item-color: #525f7f; // text color
+    $item-hover-color: hsl(0, 0%, 95%);
+
+    position: relative;
+    will-change: transform;
+
+    // Clear argon styles
+    position: unset;
+    text-transform: unset;
+    letter-spacing: unset;
+    font-size: unset;
+
+    padding: 0;
+
+    // Dropdown title
+    button {
+        // Reset argon styles
+        box-shadow: unset;
+        background-color: transparent;
+        border: none;
+        font-family: inherit;
+
+        padding: 0;
+
+        color: $title-color;
+
+        &:hover {
+            transform: unset;
+            color: $title-color;
+        }
+        &:not(:disabled):not(.disabled):active {
+            background-color: transparent;
+            color: $title-color;
+        }
+
+        display: inline-flex;
+        align-items: center;
+
+        // Triangle icon
+        // &:after {
+        //     content: "";
+        //     border: 0.35rem solid transparent;
+        //     border-top-color: rgba(#fff, 0.45);
+        //     margin-left: 0.25em;
+        //     transform: translateY(0.15em);
+        // }
+
+        // Button icon (inline SVG)
+        // svg {
+        //     path, circle {
+        //         stroke: currentColor;
+        //     }
+        // }
+    }
+
+    // Link list
+    ul {
+        color: $item-color;
+
+        // Remove list-isms
+        list-style: none;
+        margin: 0;
+        padding: 0;
+
+        position: absolute;
+        min-width: 20ch;
+        left: 50%;
+        top: calc(100% + 0.5rem);
+        transition: $transition;
+        transform: rotateX(-90deg) translateX(-50%);
+        transform-origin: top center;
+        visibility: hidden;
+        opacity: 0;
+        padding: 0.5em 0;
+        background-color: #fff;
+        border-radius: 4px;
+        box-shadow: 0 0.15em 0.25em rgba(black, 0.25);
+
+        li {
+            margin: 0;
+        }
+
+        // item icon
+        svg {
+            fill: currentColor; // inherit text color
+            height: 1.4em;
+            margin-right: 0.4em;
+        }
+    }
+
+    a {
+        color: unset;
+        display: block;
+        opacity: 0;
+        transition: $transition;
+
+        padding: 0.5em;
+        padding-left: 1rem;
+
+        &:hover {
+            color: unset;
+            background-color: $item-hover-color;
+            text-decoration: unset;
+            transition: 0.1s;
+        }
+        &:focus {
+            color: unset;
+            outline: none;
+            background-color: scale-color($item-hover-color, $lightness: -20%);
+            text-decoration: unset;
+        }
+        &:active {
+            color: unset;
+        }
+    }
+
+    // Make dropdown visible
+    &:hover, // On hover
+    &:active, &:focus, // On click
+    &:focus-within
+    {
+        // Dropdown menu
+        ul {
+            opacity: 1;
+            transform: rotateX(0) translateX(-50%);
+            visibility: visible;
+
+            a {
+                opacity: 1;
+            }
+        }
+
+        &:after {
+            opacity: 1;
+        }
+    }
+
+    // Active marker
+    // &:after {
+    //     will-change: opacity;
+    //     content: "";
+    //     border: 0.5rem solid transparent;
+    //     border-bottom-color: #fff;
+    //     position: absolute;
+    //     top: calc(100% - 1.25rem);
+    //     left: 50%;
+    //     transform: translateX(-50%);
+    //     transition: $transition;
+    //     opacity: 0;
+    // }
+}
+
+// User menu
+
+// User info in drop down when a user is logged in
+.user_info {
+    padding: 0 1rem;
+    font-size: 0.9em;
+}
+
+.user_menu {
+    svg {
+        height: 2rem;
+        width: 2rem;
+    }
 }
