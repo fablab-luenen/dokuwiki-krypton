@@ -1005,7 +1005,7 @@ a {
         position: absolute;
         min-width: 20ch;
         left: 50%;
-        top: calc(100% - 0.25rem);
+        top: calc(100% + 0.5rem);
         transition: $transition;
         transform: rotateX(-90deg) translateX(-50%);
         transform-origin: top center;
