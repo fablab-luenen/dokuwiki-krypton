@@ -98,7 +98,7 @@ $showBackground = tpl_getConf('headerBackgroundImage');
 					<ul class="navbar-nav ct-navbar-nav flex-row align-items-center">
 						<nav aria-label="Main Navigation" class="dropown"> 
 							<ul>
-								<li class="dropdown">
+								<li class="dropdown user_menu">
 									<!-- aria-expanded needs managed with Javascript -->
 									<button
 										aria-expanded="false">

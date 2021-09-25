@@ -24826,7 +24826,6 @@ header.backgoundImage {
   height: 1.5rem;
   margin: 0rem;
   margin-right: 1rem;
-  margin-left: 1rem;
   border-radius: 0.25rem !important;
   overflow: hidden;
   border: none;
@@ -25116,12 +25115,14 @@ a :active, a :focus, a .active {
   text-transform: unset;
   letter-spacing: unset;
   font-size: unset;
+  padding: 0;
 }
 .dropdown button {
   box-shadow: unset;
   background-color: transparent;
   border: none;
   font-family: inherit;
+  padding: 0;
   color: white;
   display: inline-flex;
   align-items: center;
@@ -25199,6 +25200,11 @@ a :active, a :focus, a .active {
 .user_info {
   padding: 0 1rem;
   font-size: 0.9em;
+}
+
+.user_menu svg {
+  height: 2rem;
+  width: 2rem;
 }
 
 /*# sourceMappingURL=doku.css.map */
