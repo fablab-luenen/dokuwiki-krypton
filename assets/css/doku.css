@@ -25196,4 +25196,9 @@ a :active, a :focus, a .active {
   opacity: 1;
 }
 
+.user_info {
+  padding: 0 1rem;
+  font-size: 0.9em;
+}
+
 /*# sourceMappingURL=doku.css.map */
