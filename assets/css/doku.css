@@ -25135,12 +25135,12 @@ a :active, a :focus, a .active {
   color: white;
 }
 .dropdown ul {
-  color: gray;
+  color: #525f7f;
   list-style: none;
   margin: 0;
   padding: 0;
   position: absolute;
-  min-width: 15ch;
+  min-width: 20ch;
   left: 50%;
   top: calc(100% - 0.25rem);
   transition: 250ms all 0ms ease-out;
@@ -25166,13 +25166,14 @@ a :active, a :focus, a .active {
 }
 .dropdown a:hover {
   color: unset;
-  background-color: rgba(255, 255, 255, 0.15);
+  background-color: #f2f2f2;
   text-decoration: unset;
+  transition: 0.1s;
 }
 .dropdown a:focus {
   color: unset;
   outline: none;
-  background-color: rgba(255, 255, 255, 0.25);
+  background-color: #c2c2c2;
   text-decoration: unset;
 }
 .dropdown a:active {
@@ -25188,6 +25189,11 @@ a :active, a :focus, a .active {
 }
 .dropdown:hover:after, .dropdown:active:after, .dropdown:focus:after, .dropdown:focus-within:after {
   opacity: 1;
+}
+.dropdown svg {
+  fill: currentColor;
+  height: 1.4em;
+  margin-right: 0.4em;
 }
 
 /*# sourceMappingURL=doku.css.map */

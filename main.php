@@ -120,8 +120,14 @@ $showBackground = tpl_getConf('headerBackgroundImage');
 										My dropdown
 									</button>
 									<ul>
-										<li><a href="/page1">Page 1</a></li>
-										<li><a href="/page2">Page 2</a></li>
+										<?php foreach((new \dokuwiki\Menu\UserMenu())->getItems() as $item): ?>
+											<li title="<?= $item->getTitle() ?>">
+												<a href="<?= $item->getLink() ?>">
+													<?= inlineSVG($item->getSvg()) ?>
+													<?= $item->getTitle() ?>
+												</a>
+											</li>
+										<?php endforeach; ?>
 									</ul>
 								</li>
 								<!-- <li><a href="#">Order</a></li> -->

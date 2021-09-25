@@ -939,7 +939,8 @@ a {
     $title-color: white;
     $color-dark: scale-color($title-color, $lightness: -30%);
 
-    $item-color: gray;
+    $item-color: #525f7f; // text color
+    $item-hover-color: hsl(0, 0%, 95%);
 
     position: relative;
     will-change: transform;
@@ -992,7 +993,7 @@ a {
         padding: 0;
 
         position: absolute;
-        min-width: 15ch;
+        min-width: 20ch;
         left: 50%;
         top: calc(100% - 0.25rem);
         transition: $transition;
@@ -1021,13 +1022,14 @@ a {
 
         &:hover {
             color: unset;
-            background-color: rgba($title-color, 0.15);
+            background-color: $item-hover-color;
             text-decoration: unset;
+            transition: 0.1s;
         }
         &:focus {
             color: unset;
             outline: none;
-            background-color: rgba($title-color, 0.25);
+            background-color: scale-color($item-hover-color, $lightness: -20%);
             text-decoration: unset;
         }
         &:active {
@@ -1035,6 +1037,7 @@ a {
         }
     }
 
+    // Make dropdown visible
     &:hover, // On hover
     &:active, &:focus, // On click
     &:focus-within
@@ -1068,4 +1071,11 @@ a {
     //     transition: $transition;
     //     opacity: 0;
     // }
+
+    // Icon
+    svg {
+        fill: currentColor; // inherit text color
+        height: 1.4em;
+        margin-right: 0.4em;
+    }
 }
