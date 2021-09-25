@@ -981,6 +981,13 @@ a {
         //     margin-left: 0.25em;
         //     transform: translateY(0.15em);
         // }
+
+        // Button icon (inline SVG)
+        // svg {
+        //     path, circle {
+        //         stroke: currentColor;
+        //     }
+        // }
     }
 
     // Link list
@@ -1008,6 +1015,13 @@ a {
 
         li {
             margin: 0;
+        }
+
+        // item icon
+        svg {
+            fill: currentColor; // inherit text color
+            height: 1.4em;
+            margin-right: 0.4em;
         }
     }
 
@@ -1072,10 +1086,6 @@ a {
     //     opacity: 0;
     // }
 
-    // Icon
-    svg {
-        fill: currentColor; // inherit text color
-        height: 1.4em;
-        margin-right: 0.4em;
-    }
+    // Item icon
+    
 }

@@ -25156,6 +25156,11 @@ a :active, a :focus, a .active {
 .dropdown ul li {
   margin: 0;
 }
+.dropdown ul svg {
+  fill: currentColor;
+  height: 1.4em;
+  margin-right: 0.4em;
+}
 .dropdown a {
   color: unset;
   display: block;
@@ -25189,11 +25194,6 @@ a :active, a :focus, a .active {
 }
 .dropdown:hover:after, .dropdown:active:after, .dropdown:focus:after, .dropdown:focus-within:after {
   opacity: 1;
-}
-.dropdown svg {
-  fill: currentColor;
-  height: 1.4em;
-  margin-right: 0.4em;
 }
 
 /*# sourceMappingURL=doku.css.map */

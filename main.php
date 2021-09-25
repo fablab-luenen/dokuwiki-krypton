@@ -111,14 +111,14 @@ $showBackground = tpl_getConf('headerBackgroundImage');
 
 						<nav aria-label="Main Navigation" class="dropown"> 
 							<ul>
-								<!-- <li><a href="#">My dropdown</a></li> -->
 								<li class="dropdown">
 									<!-- aria-expanded needs managed with Javascript -->
 									<button
 										aria-expanded="false"
-										aria-controls="sweets-dropdown">
-										My dropdown
+										title="<?= $_SERVER['REMOTE_USER'] ?>">
+										<svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="2 2 22 22" width="24px" fill="currentColor"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 3c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm0 14.2c-2.5 0-4.71-1.28-6-3.22.03-1.99 4-3.08 6-3.08 1.99 0 5.97 1.09 6 3.08-1.29 1.94-3.5 3.22-6 3.22z"/></svg>
 									</button>
+
 									<ul>
 										<?php foreach((new \dokuwiki\Menu\UserMenu())->getItems() as $item): ?>
 											<li title="<?= $item->getTitle() ?>">
@@ -130,7 +130,6 @@ $showBackground = tpl_getConf('headerBackgroundImage');
 										<?php endforeach; ?>
 									</ul>
 								</li>
-								<!-- <li><a href="#">Order</a></li> -->
 							</ul>
 						</nav>
 
