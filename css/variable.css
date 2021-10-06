@@ -1,0 +1,10 @@
+/* 
+    Styles that require variables to be replaced 
+    See: https://www.dokuwiki.org/devel:style.ini, https://www.dokuwiki.org/devel:css
+    By default this works directly, but we include the file differently so it won't work. 
+*/
+
+/* Navbar/Header */
+header.bg-primary {
+    background-color: __theme_color__ !important;
+}
