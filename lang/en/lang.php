@@ -13,3 +13,6 @@ $lang['__site_width__']    = 'The width of the full site (can be any length unit
 $lang['__sidebar_width__'] = 'The width of the sidebar, if any (can be any length unit: %, px, em, ...)';
 $lang['js']['createPage']  = 'Create page';
 $lang['js']['searchOrCreatePage'] = 'Find or create page';
+
+// style.ini
+$lang['__theme_color__']  = 'Accent color (visible in header und the chrome of some browsers)';

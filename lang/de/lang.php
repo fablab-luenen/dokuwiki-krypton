@@ -10,4 +10,7 @@ $lang['back_to_article']   = 'Zurück zum Artikel';
 $lang['userpage']          = 'Benutzer-Seite';
 $lang['js']['createPage']  = 'Seite erstellen';
 
+// style.ini
+$lang['__theme_color__']  = 'Akzentfarbe (sichtbar in Kopfzeile und dem Rahmen einiger Browser)';
+
 //Setup VIM: ex: et ts=2 :
