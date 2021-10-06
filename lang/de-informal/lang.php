@@ -11,4 +11,7 @@ $lang['userpage']          = 'Benutzer-Seite';
 $lang['js']['createPage']  = 'Seite erstellen';
 $lang['js']['searchOrCreatePage'] = 'Seite suchen oder erstellen';
 
+// style.ini
+$lang['__theme_color__']  = 'Akzentfarbe (sichtbar in Kopfzeile und dem Rahmen einiger Browser)';
+
 //Setup VIM: ex: et ts=2 :
