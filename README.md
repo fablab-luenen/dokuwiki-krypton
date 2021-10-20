@@ -17,8 +17,10 @@ Use the following URL for manual installation in the extension manager: `https:/
 
 - Sticky/docking page buttons for long pages
 - More configurability
-- Edit button at the top of the page
-- Various small fixes (smooth anchor scrolling, word wrap)
+- Edit button at the top of the page, overflow menu for secondary page functions ("jump to top" removed)
+- Many many small fixes (smooth anchor scrolling, word wrap)
+- Visually lighter breadcrumbs and footer
+- User menu dropdown
 
 ## Development
 "I've imported the base stylesheet from the argon design system and then added custom styles on top in the assets/css/doku.scss file. The file is then compiled to CSS using SASS."
