@@ -25210,6 +25210,51 @@ a :active, a :focus, a .active {
   opacity: 1;
 }
 
+@media print {
+  .argon-doku-page-menu, .ct-sidebar, footer, header {
+    display: none;
+  }
+
+  a:link:not(.media), a:visited:not(.media),
+#dokuwiki__content .wikilink2 {
+    color: unset;
+  }
+  a:link:not(.media)::after, a:visited:not(.media)::after,
+#dokuwiki__content .wikilink2::after {
+    content: " (" attr(href) ")";
+    font-size: 0.7em;
+  }
+
+  body a:not(.btn):not(button):not(.toggleAssistant):not(.qq-upload-button):not(.qq-upload-button):not(.toggleAssistant):not(button) {
+    text-decoration: none;
+  }
+
+  main hr {
+    display: none;
+  }
+
+  main.dokuwiki {
+    padding: 0 !important;
+  }
+
+  body {
+    margin-top: 2rem;
+    min-width: 0 !important;
+    color: black;
+  }
+
+  @page {
+    margin: 1cm;
+    margin-left: 2cm;
+  }
+  .media, .row, main {
+    display: unset;
+  }
+
+  p, span, img, h1, h2, h3, h4, h5, h6, a {
+    page-break-inside: avoid;
+  }
+}
 .user_info {
   padding: 0 1rem;
   font-size: 0.9em;

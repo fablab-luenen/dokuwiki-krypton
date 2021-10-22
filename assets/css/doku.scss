@@ -1114,6 +1114,60 @@ a {
     // }
 }
 
+// ------ Printing ------
+
+@media print {
+    // Hide everything that doesn't belong on paper
+    .argon-doku-page-menu, .ct-sidebar, footer, header {
+        display: none;
+    }
+
+    // Display their destinations behind links
+    a:link:not(.media), a:visited:not(.media), /* avoid images */
+    #dokuwiki__content .wikilink2 /* broken links */, {
+        color: unset; // Don't show link color since we can't click them anway
+        &::after {
+            content: " (" attr(href) ")"; // In turn show where the link leads
+            font-size: 0.7em;
+        }
+    }
+
+    // Argon can be annoying
+    body a:not(.btn):not(.qq-upload-button):not(.toggleAssistant):not(button) {
+        text-decoration: none; // DokuWiki shows a subtle border instead
+    }
+
+    // Remove usual margins/paddings
+    main hr { display: none; }
+    main.dokuwiki {
+        padding: 0 !important; // This barely overrides argon's CSS ...
+    }
+
+    // Re-add margin to top
+    body {
+        margin-top: 2rem;
+        min-width: 0 !important; // STFU Argon
+        color: black;
+    }
+
+    // Use page margins (show up on pages individually)
+    @page {
+        margin: 1cm;
+        margin-left: 2cm;
+     }
+
+     // Remove all flex elements to make page-break-inside work
+     // https://stackoverflow.com/questions/7706504/page-break-inside-doesnt-work-in-chrome/12386608#comment96041791_12386608
+     .media, .row, main {
+         display: unset;
+     }
+
+     // Avoid page breaks within elements
+     p, span, img, h1, h2, h3, h4, h5, h6, a {
+        page-break-inside: avoid;
+     }
+}
+
 // User menu
 
 // User info in drop down when a user is logged in
