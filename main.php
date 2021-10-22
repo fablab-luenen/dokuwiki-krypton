@@ -315,8 +315,8 @@ $showBackground = tpl_getConf('headerBackgroundImage');
 							</div>							
 						</div>
 
-						<hr />
 						<!-- Footer -->
+						<hr />
 						<footer class="footer-card">
 							<div class="card-body">
 								<div class="container">
@@ -325,41 +325,19 @@ $showBackground = tpl_getConf('headerBackgroundImage');
 											<div id="dokuwiki__footer">
 												<div class="pad">
 													<div class="doc">
-														<?php tpl_pageinfo() /* 'Last modified' etc */ ?></div>
+														<?php tpl_pageinfo() /* 'Last modified' etc */ ?>
+													</div>
 													<?php tpl_license('0') /* content license, parameters: img=*badge|button|0, imgonly=*0|1, return=*0|1 */ ?>
 												</div>
 											</div>
 										</div>
-									</div>
-									
-									<div class="row">
-									<?php if (tpl_getConf('showBottomTools')): ?>
-									
-									<div class="argon-doku-footer-fullmenu">
-										<?php
-										$menu_items = (new \dokuwiki\Menu\MobileMenu())->getItems();
-										foreach($menu_items as $item) {
-										echo '<li class="'.$item->getType().'">'
-											.'<a class="" href="'.$item->getLink().'" title="'.$item->getTitle().'">'
-											.'<i class="" aria-hidden="true">'.inlineSVG($item->getSvg()).'</i>'
-											. '<span class="a11y">'.$item->getLabel().'</span>'
-											. '</a></li>';
-										}
-										?>
-									</div>
-									<?php endif; ?>
+									</div>									
 									<?php tpl_includeFile('footer.html') ?>
-									</div>
-
 								</div>
-
 							</div>
 						</footer>
 						<?php tpl_indexerWebBug(); ?>
 					</main>
-
-
-
 
 					<!-- Right Sidebar -->
 					<div class="d-none d-xl-block col-xl-2 ct-toc">
