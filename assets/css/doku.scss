@@ -890,6 +890,15 @@ header.backgoundImage {
 
 footer {
     text-align: center;
+    font-size: 0.8em;
+
+    // Light text
+    opacity: 0.75;
+    &:hover { 
+        opacity: 1;
+        transition: 0.25s;
+    }
+    transition: 0.5s;
 
     .argon-doku-footer-fullmenu {
         margin-left: auto;
