@@ -158,9 +158,6 @@ $showBackground = tpl_getConf('headerBackgroundImage');
 						<nav class="collapse ct-links" id="ct-docs-nav">
 							<?php if ($showSidebar): ?>
 							<div id="dokuwiki__aside" class="ct-toc-item active">
-								<a class="ct-toc-link">
-									<?php echo $lang['sidebar'] ?>
-								</a>
 								<div class="leftsidebar">
 									<?php tpl_includeFile('sidebarheader.html')?>
 									<?php tpl_include_page($conf['sidebar'], 1, 1)?>

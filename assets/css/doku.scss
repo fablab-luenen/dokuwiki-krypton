@@ -817,6 +817,11 @@ header.backgoundImage {
     ul {
         padding: 0;
     }
+
+    .ct-links {
+        padding: 0;
+        max-height: calc(100vh - 4rem);
+    }
 }
 
 // Sidebar item block

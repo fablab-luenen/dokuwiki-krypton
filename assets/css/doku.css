@@ -25026,6 +25026,10 @@ header.backgoundImage {
 .ct-sidebar ul, .ct-sidenav ul, .leftsidebar .leftsidebar ul ul {
   padding: 0;
 }
+.ct-sidebar .ct-links, .ct-sidenav .ct-links, .leftsidebar .leftsidebar ul .ct-links {
+  padding: 0;
+  max-height: calc(100vh - 4rem);
+}
 
 .ct-toc-item {
   margin-left: 1rem;
