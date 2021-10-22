@@ -24766,7 +24766,7 @@ button.button.plugin_prosemirror_useWYSIWYG {
 }
 
 header.bg-primary {
-  box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0.25rem 0.5rem rgba(99, 95, 95, 0.2);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -25074,6 +25074,13 @@ header.backgoundImage {
 
 footer {
   text-align: center;
+  font-size: 0.8em;
+  opacity: 0.75;
+  transition: 0.5s;
+}
+footer:hover {
+  opacity: 1;
+  transition: 0.25s;
 }
 footer .argon-doku-footer-fullmenu {
   margin-left: auto;
