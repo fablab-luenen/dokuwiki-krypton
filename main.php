@@ -6,7 +6,7 @@ if (!defined('DOKU_INC')) {
 @require_once dirname(__FILE__) . '/tpl_functions.php'; /* include hook for template functions */
 
 $showTools = !tpl_getConf('hideTools') || (tpl_getConf('hideTools') && !empty($_SERVER['REMOTE_USER']));
-$showSidebar = page_findnearest($conf['sidebar']) && ($ACT == 'show');
+$showSidebar = page_findnearest($conf['sidebar']);
 $showIcon = tpl_getConf('showIcon');
 $showBackground = tpl_getConf('headerBackgroundImage');
 ?>
