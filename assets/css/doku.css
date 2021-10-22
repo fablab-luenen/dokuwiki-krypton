@@ -25220,4 +25220,8 @@ a :active, a :focus, a .active {
   width: 2rem;
 }
 
+html .collapsing {
+  transition: height 0.4s cubic-bezier(0.25, 0, 0, 1);
+}
+
 /*# sourceMappingURL=doku.css.map */

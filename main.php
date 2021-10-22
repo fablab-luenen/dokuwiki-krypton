@@ -153,7 +153,7 @@ $showBackground = tpl_getConf('headerBackgroundImage');
 					$buffer = ob_get_clean();
 					?>
 
-					<!-- left sidebar -->
+					<!-- left sidebar, which can become a collapsible page menu on narrow screens -->
 					<div class="col-12 col-md-3 col-xl-2 ct-sidebar">
 						<nav class="collapse ct-links" id="ct-docs-nav">
 							<?php if ($showSidebar): ?>
