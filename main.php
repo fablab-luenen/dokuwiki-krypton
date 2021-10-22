@@ -317,9 +317,6 @@ $showBackground = tpl_getConf('headerBackgroundImage');
 									</div>									
 									<?php tpl_includeFile('footer.html') ?>
 									<div class="site-tools">
-										<a>
-											<?php echo $lang['site_tools'] ?>:
-										</a>
 										<?php
 											$menu_items = (new \dokuwiki\Menu\SiteMenu())->getItems();
 											foreach($menu_items as $item) {
