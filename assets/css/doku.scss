@@ -15,6 +15,8 @@
 
 // ------ General ------
 
+$header-height: 4rem;
+
 html {
     scroll-padding-top: 5rem; // Offset for anchor scrolling
     scroll-behavior: smooth; // Smooth anchor scrolling
@@ -331,8 +333,8 @@ textarea {
 }
 
 // Visual editor (Prosemirror)
-body .prosemirror_wrapper .menubar { // override default top value ... i should change this
-    top: 5rem; // Offset by header bar height
+body .prosemirror_wrapper .menubar {
+    top: $header-height; // Offset by header bar height
 }
 
 button.button.plugin_prosemirror_useWYSIWYG {
@@ -402,6 +404,10 @@ button.button.plugin_prosemirror_useWYSIWYG {
 }
 
 // ------ Navbar ------
+
+header {
+    height: $header-height;
+}
 
 header.bg-primary {
     // background color defined in variable.css
@@ -820,7 +826,7 @@ header.backgoundImage {
 
     .ct-links {
         padding: 0;
-        max-height: calc(100vh - 4rem);
+        max-height: calc(100vh - $header-height);
     }
 }
 

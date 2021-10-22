@@ -24716,7 +24716,7 @@ textarea {
 }
 
 body .prosemirror_wrapper .menubar {
-  top: 5rem;
+  top: 4rem;
 }
 
 button.button.plugin_prosemirror_useWYSIWYG {
@@ -24759,6 +24759,10 @@ button.button.plugin_prosemirror_useWYSIWYG {
   margin-bottom: 0.5rem;
   list-style: none;
   padding: 0;
+}
+
+header {
+  height: 4rem;
 }
 
 header.bg-primary {
