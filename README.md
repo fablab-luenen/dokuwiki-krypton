@@ -21,6 +21,7 @@ Use the following URL for manual installation in the extension manager: `https:/
 - Configurability
 - Edit button at the top of the page, overflow menu for secondary page functions ("jump to top" removed)
 - Visually lighter breadcrumbs and footer
+- Pages are nicely printable
 
 ## Development
 "I've imported the base stylesheet from the argon design system and then added custom styles on top in the assets/css/doku.scss file. The file is then compiled to CSS using SASS."
