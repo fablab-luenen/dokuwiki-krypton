@@ -25103,6 +25103,9 @@ footer .card-body {
   padding-top: 0;
   padding-bottom: 0;
 }
+footer .site-tools a {
+  margin: 0 0.25em;
+}
 
 a {
   transition: 0.2s;
