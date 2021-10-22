@@ -383,13 +383,10 @@ button.button.plugin_prosemirror_useWYSIWYG {
 
         ul {
             margin-bottom: 0.5rem;
-        }
 
-        ul {
-            list-style: disc outside;
-            list-style-position: outside;
-            list-style-image: none;
-            list-style-type: disc;
+            // Remove bullet points
+            list-style: none;
+            padding: 0;
         }
     }
 

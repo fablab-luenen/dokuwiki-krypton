@@ -24757,12 +24757,8 @@ button.button.plugin_prosemirror_useWYSIWYG {
 }
 .ct-toc #dw__toc ul {
   margin-bottom: 0.5rem;
-}
-.ct-toc #dw__toc ul {
-  list-style: disc outside;
-  list-style-position: outside;
-  list-style-image: none;
-  list-style-type: disc;
+  list-style: none;
+  padding: 0;
 }
 
 header.bg-primary {
