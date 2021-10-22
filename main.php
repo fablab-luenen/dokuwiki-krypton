@@ -266,27 +266,6 @@ $showBackground = tpl_getConf('headerBackgroundImage');
 
 						<hr />
 
-						<?php if ($showTools && tpl_getConf('movePageTools')): ?>
-						<!-- Page Menu -->
-                        <div class="argon-doku-page-menu">
-                            <?php
-                            $menu_items = (new \dokuwiki\Menu\PageMenu())->getItems();
-                            foreach($menu_items as $item) {
-								$accesskey = $item->getAccesskey();
-								$akey = '';
-								if($accesskey) {
-									$akey = 'accesskey="'.$accesskey.'" ';
-								}				
-                                echo '<li class="'.$item->getType().'">'
-									.'<a class="page-menu__link '.$item->getLinkAttributes('')['class'].'" href="'.$item->getLink().'" title="'.$item->getTitle().'" '.$akey.'>'
-                                    .'<i class="">'.inlineSVG($item->getSvg()).'</i>'
-                                    . '<span class="a11y">'.$item->getLabel().'</span>'
-                                    . '</a></li>';
-                            }
-                            ?>
-						</div>
-						<?php endif;?>
-
 						<!-- Wiki Contents -->
 						<div id="dokuwiki__content">
 							<div class="pad">
