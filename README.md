@@ -17,9 +17,10 @@ Use the following URL for manual installation in the extension manager: `https:/
 - Support for header background images
 - Many many small fixes (smooth anchor scrolling, word wrap, site title like in icon mode)
 - Sticky/docking page buttons for long pages
-- User menu dropdown
 - Configurability
+- User menu dropdown
 - Edit button at the top of the page, overflow menu for secondary page functions ("jump to top" removed)
+- Site tools in footer
 - Visually lighter breadcrumbs and footer
 - Pages are nicely printable
 
